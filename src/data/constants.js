@@ -153,7 +153,8 @@ export const skills = [
       },
       {
         name: "Vercel",
-        image: "/Vercel.svg",
+        image:
+          "https://assets.vercel.com/image/upload/front/favicon/vercel/180x180.png",
       },
       // {
       //   name: "Figma",
@@ -368,33 +369,32 @@ export const projects = [
     github: "https://github.com/Jaseem8/ecommerce",
     webapp: "https://ecommerce-pi-blue.vercel.app/",
   },
-  // {
-  //   id: 2,
-  //   title: "Brain Tumor Detection",
-  //   date: "Jan 2023 - Mar 2023",
-  //   description:
-  //     "Preprocessed and augmented the dataset to improve model accuracy, trained the model, created API using model and Python, and used React web app for the project's front end. Achievements: Achieved an accuracy of 99.2% to accurately detect brain tumors from medical images.",
-  //   image:
-  //     "https://github.com/rishavchanda/Brain-Tumor-Detection/raw/main/Readme_resource/Image2.png",
-  //   tags: ["Python", "Keras", "TensorFlow", "VGG16", "Pickle", "React"],
-  //   category: "Other",
-  //   github: "https://github.com/rishavchanda/Brain-Tumor-Detection",
-  //   webapp: "https://brain-tumor.netlify.app/",
-  //   member: [
-  //     {
-  //       name: "Rishav Chanda",
-  //       img: "https://avatars.githubusercontent.com/u/64485885?v=4",
-  //       linkedin: "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
-  //       github: "https://github.com/rishavchanda/",
-  //     },
-  //     {
-  //       name: "Upasana Chaudhuri",
-  //       img: "https://avatars.githubusercontent.com/u/100614635?v=4",
-  //       linkedin: "https://www.linkedin.com/in/upasana-chaudhuri-2a2bb5231/",
-  //       github: "https://github.com/upasana0710",
-  //     },
-  //   ],
-  // },
+  {
+    id: 2,
+    title: "ChatFlow ProtoType",
+    date: "Apr 2024 - Apr 2024",
+    description:
+      "Created a FlowBoard for BiteSpeed with ReactFlow,React,React Toastify etc",
+    image: "chatflow.png",
+    tags: ["React", "JavaScript", "ReactFlow", "HTML", "CSS", "React"],
+    category: "Other",
+    github: "https://github.com/Jaseem8/chatFlow",
+    webapp: "https://chat-flow-black.vercel.app/",
+    // member: [
+    //   {
+    //     name: "Rishav Chanda",
+    //     img: "https://avatars.githubusercontent.com/u/64485885?v=4",
+    //     linkedin: "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
+    //     github: "https://github.com/rishavchanda/",
+    //   },
+    //   {
+    //     name: "Upasana Chaudhuri",
+    //     img: "https://avatars.githubusercontent.com/u/100614635?v=4",
+    //     linkedin: "https://www.linkedin.com/in/upasana-chaudhuri-2a2bb5231/",
+    //     github: "https://github.com/upasana0710",
+    //   },
+    // ],
+  },
   {
     id: 3,
     title: "Android Game Devlopment",
@@ -407,19 +407,17 @@ export const projects = [
     github: "https://github.com/Jaseem8/Amaze-3D",
     webapp: "http://bit.ly/amaze3d",
   },
-  // {
-  //   id: 10,
-  //   title: "Job Finding App",
-  //   date: "Jun 2023 - Jul 2023",
-  //   description:
-  //     "A Job Finding App made with React Native, Axios. Users can search for any job coming from API and apply there.",
-  //   image:
-  //     "https://user-images.githubusercontent.com/64485885/255237090-cf798a2c-1b41-4bb7-b904-b5353a1f08e8.png",
-  //   tags: ["React Native", "JavaScript", "Axios"],
-  //   category: "android app",
-  //   github: "https://github.com/rishavchanda/Job-finder-App",
-  //   webapp: "https://github.com/rishavchanda/Job-finder-App",
-  // },
+  {
+    id: 10,
+    title: "Advanced Job Filtering UI",
+    date: "May 2024 - May 2024",
+    description: "Created Search/ Filter Page Prototype For WeekDay",
+    image: "weekday.png",
+    tags: ["React", "JavaScript", "Axios"],
+    category: "Other",
+    github: "https://github.com/rishavchanda/Job-finder-App",
+    webapp: "https://github.com/rishavchanda/Job-finder-App",
+  },
   // {
   //   id: 4,
   //   title: "Whatsapp Clone",
