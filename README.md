@@ -6,7 +6,7 @@ Welcome to my portfolio! This project showcases my skills, projects, and experie
 
 ## Some Images:
 
-<img width="450px;" src="/public/portfolio.png"/>
+<img  src="/public/portfolio.png"/>
 
 ## Table of Contents
 
