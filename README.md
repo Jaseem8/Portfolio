@@ -4,6 +4,10 @@ Welcome to my portfolio! This project showcases my skills, projects, and experie
 
 ### Weblink: [Live Website](https://jaseem8.github.io)
 
+## Some Images:
+
+<img width="450px;" src="/public/portfolio.png"/>
+
 ## Table of Contents
 
 - [Introduction](#introduction)
