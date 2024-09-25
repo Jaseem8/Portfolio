@@ -2,15 +2,15 @@ export const Bio = {
   name: "Jaseem Sabith ",
   roles: [
     "Full Stack Developer",
-    "Game Developer",
-    "UI/UX Designer",
-    "Programmer",
+    "Frontend Developer",
+    "Backend Developer",
+    "Software Engineer",
   ],
   description:
-    "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
+    "I am a motivated and versatile individual with around 5 years of experience in the field, always eager to take on new challenges. With a passion for learning, I am dedicated to delivering high-quality results. My positive attitude and growth mindset empower me to adapt and thrive in dynamic environments. I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/jaseem8",
   resume:
-    "https://drive.google.com/file/d/1mWRAQDbx1JYWTiI37za-awlWm_yHqgmt/view?usp=drive_link",
+    "https://drive.google.com/file/d/1QhaCJJbagAtXFVta282CzCgNXcUbFlWb/view?usp=drive_link",
   linkedin: "https://www.linkedin.com/in/jaseem8/",
   twitter: "https://twitter.com/jaseem_sabith",
   insta: "https://www.instagram.com/jaseem8/",
@@ -76,10 +76,10 @@ export const skills = [
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
       },
 
-      // {
-      //   name: "Postgresql",
-      //   image: "https://www.postgresql.org/media/img/about/press/elephant.png",
-      // },
+      {
+        name: "PostgreSQL",
+        image: "https://www.postgresql.org/media/img/about/press/elephant.png",
+      },
       {
         name: "MongoDB",
         image:
@@ -89,33 +89,44 @@ export const skills = [
         name: "Mongoose",
         image: "/mongoose.png",
       },
+
+      {
+        name: "MySQL",
+        image:
+          "https://1000logos.net/wp-content/uploads/2020/08/MySQL-Logo-640x400.png",
+      },
+      {
+        name: "Java",
+        image:
+          "https://logos-world.net/wp-content/uploads/2022/07/Java-Logo.png",
+      },
     ],
   },
-  // {
-  //   title: "Android",
-  //   skills: [
-  //     {
-  //       name: "Java",
-  //       image:
-  //         "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
-  //     },
-  //     {
-  //       name: "Kotlin",
-  //       image:
-  //         "https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg",
-  //     },
-  //     {
-  //       name: "XML",
-  //       image:
-  //         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBMw6_RdwKQ9bDFfnKDX1iwMl4bVJEvd9PP53XuIw&s",
-  //     },
-  //     {
-  //       name: "Android Studio",
-  //       image:
-  //         "https://developer.android.com/static/studio/images/new-studio-logo-1_1920.png",
-  //     },
-  //   ],
-  // },
+  {
+    title: "DevOPs",
+    skills: [
+      {
+        name: "Linux",
+        image:
+          "https://images.vexels.com/content/140692/preview/linux-logo-72ceef.png",
+      },
+      {
+        name: "AWS",
+        image:
+          "https://download.logo.wine/logo/Amazon_Web_Services/Amazon_Web_Services-Logo.wine.png",
+      },
+      {
+        name: "Jenkins",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Jenkins_logo.svg/1200px-Jenkins_logo.svg.png",
+      },
+      {
+        name: "Maven",
+        image:
+          "https://logowik.com/content/uploads/images/maven-apache3537.jpg",
+      },
+    ],
+  },
   {
     title: "Others",
     skills: [
@@ -166,55 +177,60 @@ export const skills = [
 ];
 
 export const experiences = [
+  // {
+  //   id: 0,
+  //   img: "https://media.licdn.com/dms/image/D4D0BAQFHUN3-LG2_BA/company-logo_200_200/0/1709386841118/itjobxs_logo?e=1726099200&v=beta&t=M5A0mNHDY7_nfJYJGMohLqQ_gZOR6-j6pxoCVAAUvcA",
+  //   role: "Software Developer Intern",
+  //   company: "ITJOBXS",
+  //   date: "May 2023 - Current",
+  //   desc: "Designed and developed a fully responsive webpage for a specific section of ITJOBXS, addressing user verification/authentication and engineering challenges related to detecting and removing fake bots and posts, and integrated Google's Recaptcha for added website security.",
+  //   skills: ["HTMl", "CSS", "React", "JavaScript", "TypeScript", "Node Js"],
+  //   // doc: "https://media.licdn.com/dms/image/D4D2DAQFlp60ZqHuaFQ/profile-treasury-image-shrink_1280_1280/0/1691180828512?e=1692381600&v=beta&t=mM5Y_NE5EPlQhez5FAN6NLVSKcO_Ojt_9Gq3mnFGkAQ",
+  // },
+  // {
+  //   id: 0,
+  //   img: "/chegg.jpg",
+  //   role: "Subject Matter Expert",
+  //   company: "Chegg",
+  //   date: "February 2020 - May 2023",
+  //   desc: "I mentored mechanical engineering college students, aiding their understanding of complex concepts, offering detailed assignment feedback for improved clarity and quality, and nurturing proficient problem-solving and analytical skills within an engineering framework.",
+  //   skills: ["Problem Solving", "Mentoring", "Mechanical Engineering"],
+  //   // doc: "https://firebasestorage.googleapis.com/v0/b/buckoid-917cf.appspot.com/o/Screenshot%20from%202023-05-28%2023-20-46.png?alt=media&token=5570f995-e8f4-4f12-bb2f-73bcf4b20730",
+  // },
   {
-    id: 0,
-    img: "https://media.licdn.com/dms/image/D4D0BAQFHUN3-LG2_BA/company-logo_200_200/0/1709386841118/itjobxs_logo?e=1726099200&v=beta&t=M5A0mNHDY7_nfJYJGMohLqQ_gZOR6-j6pxoCVAAUvcA",
-    role: "Software Developer Intern",
-    company: "ITJOBXS",
-    date: "May 2023 - Current",
-    desc: "Designed and developed a fully responsive webpage for a specific section of ITJOBXS, addressing user verification/authentication and engineering challenges related to detecting and removing fake bots and posts, and integrated Google's Recaptcha for added website security.",
-    skills: ["HTMl", "CSS", "React", "JavaScript", "TypeScript", "Node Js"],
-    // doc: "https://media.licdn.com/dms/image/D4D2DAQFlp60ZqHuaFQ/profile-treasury-image-shrink_1280_1280/0/1691180828512?e=1692381600&v=beta&t=mM5Y_NE5EPlQhez5FAN6NLVSKcO_Ojt_9Gq3mnFGkAQ",
-  },
-  {
-    id: 0,
+    id: 1,
     img: "/chegg.jpg",
-    role: "Subject Matter Expert",
+    role: "Full Stack Web Developer",
     company: "Chegg",
-    date: "February 2020 - May 2023",
-    desc: "I mentored mechanical engineering college students, aiding their understanding of complex concepts, offering detailed assignment feedback for improved clarity and quality, and nurturing proficient problem-solving and analytical skills within an engineering framework.",
-    skills: ["Problem Solving", "Mentoring", "Mechanical Engineering"],
-    // doc: "https://firebasestorage.googleapis.com/v0/b/buckoid-917cf.appspot.com/o/Screenshot%20from%202023-05-28%2023-20-46.png?alt=media&token=5570f995-e8f4-4f12-bb2f-73bcf4b20730",
+    date: "April 2021 – June 2024",
+    desc: "Created UIs with React.js, TypeScript, and Redux, boosting speed by 20%. Built RESTful APIs using Node.js, Express, and MongoDB. Increased mobile traffic by 25% with Tailwind CSS and CSS Grid. Deployed apps on AWS with S3, EC2, and Lambda.",
+    skills: [
+      "React",
+      "TypeScript",
+      "Redux",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "AWS",
+    ],
   },
-  // {
-  //   id: 1,
-  //   img: "https://media.licdn.com/dms/image/D560BAQFDUKPSU8P0Lw/company-logo_200_200/0/1687947132305?e=1698278400&v=beta&t=cBF3SdszRLspmyvV-rHa1y4tdj_hjjivH7Xy0Z7kOD8",
-  //   role: "Fullstack Externship",
-  //   company: "Flipr",
-  //   date: "June 2023 - July 2023",
-  //   desc: "Built an employee management full stack web app used Docker and deployed on AWS ec2. I was the top performer in the program.",
-  //   skills: [
-  //     "ReactJS",
-  //     "Redux",
-  //     "NodeJs",
-  //     "Material UI",
-  //     "HTML",
-  //     "CSS",
-  //     "JavaScript",
-  //     "Docker",
-  //     "AWS",
-  //     "MongoDB",
-  //   ],
-  // },
-  // {
-  //   id: 2,
-  //   img: "https://media.licdn.com/dms/image/C510BAQGSObrO0QPlMQ/company-logo_200_200/0/1555704980721?e=1692835200&v=beta&t=FjOWcUVVNzqFbTmmp0iXQkv5keBQC5lxIQ7K6rmMSMQ",
-  //   role: "Open Source Contributor ",
-  //   company: "GirlScript Summer of Code",
-  //   date: "May 2023 - Present",
-  //   desc: "Contributing to different open-source projects and learn from industry experts",
-  //   doc: "https://media.licdn.com/dms/image/D4D22AQGzSpgFaR4hsQ/feedshare-shrink_800/0/1684079632872?e=1687996800&v=beta&t=i0xWn_k32Oj9SxKfc6rARSbOghXD9Ge6WyEb2p2vvrc",
-  // },
+  {
+    id: 2,
+    img: "/itjobxs.jpeg",
+    role: "Full Stack Web Developer",
+    company: "ITJOBXS",
+    date: "January 2020 – February 2021",
+    desc: "Built dynamic UIs using React.js, Redux, Tailwind CSS, and Bootstrap. Integrated REST APIs using Node.js and Express.js and implemented secure JWT and OAuth authentication. Improved performance using React Hooks, Context API, and Webpack.",
+    skills: [
+      "React",
+      "Redux",
+      "Tailwind CSS",
+      "Bootstrap",
+      "Node.js",
+      "Express.js",
+    ],
+  },
+
   // {
   //   id: 3,
   //   img: "https://media.licdn.com/dms/image/D4D0BAQGfGQHEJt8gPA/company-logo_100_100/0/1666002815185?e=1692230400&v=beta&t=c4obZda4Uh9q6vOcmCbxjoSiExvbvYwEHUlgdY0tU-4",
@@ -249,6 +265,8 @@ export const experiences = [
   //   ],
   //   doc: "https://firebasestorage.googleapis.com/v0/b/buckoid-917cf.appspot.com/o/WhatsApp%20Image%202023-05-05%20at%2012.07.39%20AM.jpeg?alt=media&token=9f0e1648-568b-422d-bd0b-1f125f722245",
   // },
+
+  ,
 ];
 
 export const education = [
@@ -283,7 +301,29 @@ export const education = [
 
 export const projects = [
   {
-    id: 9,
+    id: 0,
+    title: "Advanced Admin Dashboard",
+    date: "Ongoing",
+    description:
+      "A comprehensive frontend dashboard featuring charts, calendars, forms, and real-time notifications. Includes user management, analytics, and scheduling features.",
+    image: "admin.png", // Replace with the appropriate image filename if different
+    tags: [
+      "React",
+      "Chart.js",
+      "Material-UI",
+      "ApexCharts",
+      "FullCalendar",
+      "Formik",
+      "Yup",
+      "Bootstrap",
+    ],
+    category: "web app",
+    github: "https://github.com/Jaseem8/Admin-Dashboard",
+    webapp: "https://stalwart-haupia-c5ff6d.netlify.app/",
+  },
+
+  {
+    id: 1,
     title: "Social Networking App",
     date: "July 2023 - Current",
     description:
@@ -308,7 +348,7 @@ export const projects = [
     webapp: "https://hello-social.vercel.app/",
   },
   {
-    id: 0,
+    id: 2,
     title: "Messenger App",
     date: "Apr 2023 - June 2023",
     description:
@@ -348,7 +388,7 @@ export const projects = [
     // ],
   },
   {
-    id: 1,
+    id: 3,
     title: "Ecommerce Website",
     date: "March 2023 - April 2023",
     description:
@@ -370,7 +410,20 @@ export const projects = [
     webapp: "https://ecommerce-pi-blue.vercel.app/",
   },
   {
-    id: 2,
+    id: 4,
+    title: "Data Analyst Job Market Analysis",
+    date: "Ongoing",
+    description:
+      "Analyzed job postings to identify high-paying roles and in-demand skills. Created SQL queries to extract key insights, including salary ranges and required skills.",
+    image: "/data_sql.png", // Replace with the appropriate image filename if available
+    tags: ["SQL", "PostgreSQL", "MySQL", "Git", "Data Visualization"],
+    category: "Other",
+    github: "https://github.com/Jaseem8/SQL_Project_Data_Job_Analysis",
+    webapp: "N/A", // Update if there's a web app link
+  },
+
+  {
+    id: 5,
     title: "ChatFlow ProtoType",
     date: "Apr 2024 - Apr 2024",
     description:
@@ -396,7 +449,7 @@ export const projects = [
     // ],
   },
   {
-    id: 3,
+    id: 6,
     title: "Android Game Devlopment",
     date: "Dec 2021 - Apr 2022",
     description:
@@ -408,7 +461,7 @@ export const projects = [
     webapp: "http://bit.ly/amaze3d",
   },
   {
-    id: 10,
+    id: 7,
     title: "Advanced Job Filtering UI",
     date: "May 2024 - May 2024",
     description: "Created Search/ Filter Page Prototype For WeekDay",
