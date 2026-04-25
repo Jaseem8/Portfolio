@@ -87,7 +87,7 @@ function Footer() {
   return (
     <FooterContainer>
       <FooterWrapper>
-        <Logo>Jaseem Sabith</Logo>
+        <Logo>{Bio.name}</Logo>
         <Nav>
           <NavLink href="#about">About</NavLink>
           <NavLink href="#skills">Skills</NavLink>
@@ -109,7 +109,7 @@ function Footer() {
             <InstagramIcon />
           </SocialMediaIcon>
         </SocialMediaIcons>
-        <Copyright>&copy; 2023 Jaseem Sabith. All rights reserved.</Copyright>
+        <Copyright>&copy; {new Date().getFullYear()} {Bio.name}. All rights reserved.</Copyright>
       </FooterWrapper>
     </FooterContainer>
   );
