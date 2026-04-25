@@ -4,6 +4,9 @@ import LinkedIn from '@mui/icons-material/LinkedIn';
 import Modal from '@mui/material/Modal';
 import React from 'react'
 import styled from 'styled-components'
+import ReportProblemRounded from '@mui/icons-material/ReportProblemRounded';
+import LightbulbRounded from '@mui/icons-material/LightbulbRounded';
+import AutoGraphRounded from '@mui/icons-material/AutoGraphRounded';
 
 const Container = styled.div`
 width: 100%;
@@ -147,7 +150,31 @@ const MemberName = styled.div`
         font-size: 14px;
     }
 `;
+const Section = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 16px 6px;
+    padding: 12px;
+    background: ${({ theme }) => theme.primary + '08'};
+    border-radius: 12px;
+    border-left: 4px solid ${({ theme }) => theme.primary};
+`;
 
+const SectionTitle = styled.div`
+    font-size: 18px;
+    font-weight: 600;
+    color: ${({ theme }) => theme.primary};
+    display: flex;
+    align-items: center;
+    gap: 8px;
+`;
+
+const SectionContent = styled.div`
+    font-size: 15px;
+    color: ${({ theme }) => theme.text_primary + 'BB'};
+    line-height: 1.6;
+`;
 
 const ButtonGroup = styled.div`
     display: flex;
@@ -208,6 +235,36 @@ const index = ({ openModal, setOpenModal }) => {
                         ))}
                     </Tags>
                     <Desc>{project?.description}</Desc>
+                    
+                    {project.challenge && (
+                        <Section>
+                            <SectionTitle>
+                                <ReportProblemRounded style={{ fontSize: '20px' }} />
+                                The Challenge
+                            </SectionTitle>
+                            <SectionContent>{project.challenge}</SectionContent>
+                        </Section>
+                    )}
+
+                    {project.solution && (
+                        <Section>
+                            <SectionTitle>
+                                <LightbulbRounded style={{ fontSize: '20px' }} />
+                                The Solution
+                            </SectionTitle>
+                            <SectionContent>{project.solution}</SectionContent>
+                        </Section>
+                    )}
+
+                    {project.impact && (
+                        <Section>
+                            <SectionTitle>
+                                <AutoGraphRounded style={{ fontSize: '20px' }} />
+                                The Impact
+                            </SectionTitle>
+                            <SectionContent>{project.impact}</SectionContent>
+                        </Section>
+                    )}
                     {project.member && (
                         <>
                             <Label>Members</Label>

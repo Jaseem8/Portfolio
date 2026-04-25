@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Counter from '../HeroSection/Counter'
 
 const Document = styled.img`
     display: none;
@@ -139,7 +140,7 @@ const EducationCard = ({ education }) => {
                     <Date>{education.date}</Date>
                 </Body>
             </Top>
-            <Grade><b>Grade: </b>{education.grade}</Grade>
+            <Grade><b>Grade: </b><Counter value={education.grade} color="#B192EF" /></Grade>
             <Description>
                 <Span>{education.desc}</Span>
             </Description>

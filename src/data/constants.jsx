@@ -4,6 +4,9 @@ export const Bio = {
     "Senior Software Engineer",
     "Full Stack Developer",
     "GenAI Specialist",
+    "Front-End Engineer",
+    "Back-End Engineer",
+    "Forward Deployed Engineer",
   ],
   description:
     "Senior Software Engineer (Tier 1 graduate) with 7 years of 0-to-1 product development experience. Expert in architecting scalable microservices, integrating Generative AI & RAG systems into production, and leading full-stack agile teams (TypeScript, Python, NestJS, React, AWS) to scale platforms for 900k+ users.",
@@ -15,6 +18,13 @@ export const Bio = {
   insta: "https://www.instagram.com/jaseem8/",
   facebook: "https://www.facebook.com/jaseem.sabith8/",
 };
+
+export const impactStats = [
+  { label: "Experience", value: "7+ Years", icon: "briefcase" },
+  { label: "Users Scaled", value: "900k+", icon: "users" },
+  { label: "Tier-1 Graduate", value: "NIT Calicut", icon: "education" },
+  { label: "Daily Transactions", value: "50k+", icon: "chart" },
+];
 
 export const skills = [
   {
@@ -119,22 +129,22 @@ export const experiences = [
     highlights: [
       {
         title: "Comera scales to 900k+ active users!",
-        image: "https://images.unsplash.com/photo-1551288049-bbda48658aba?auto=format&fit=crop&q=80&w=300", 
+        image: "https://images.unsplash.com/photo-1551288049-bbda48658aba?auto=format&fit=crop&q=80&w=300",
         link: "https://www.linkedin.com/company/comera-app/",
       },
       {
         title: "New Real-time Analytics Dashboard Live",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=300", 
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=300",
         link: "https://www.linkedin.com/company/comera-app/",
       },
       {
         title: "Event-Driven Architecture deep dive",
-        image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=300", 
+        image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=300",
         link: "https://www.linkedin.com/company/comera-app/",
       },
       {
         title: "Scaling microservices with Kafka",
-        image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=300", 
+        image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=300",
         link: "https://www.linkedin.com/company/comera-app/",
       }
     ],
@@ -158,17 +168,17 @@ export const experiences = [
     highlights: [
       {
         title: "Engineering Excellence: Migrating to Vite",
-        image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=300", 
+        image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=300",
         link: "https://www.linkedin.com/company/chegg/",
       },
       {
         title: "Performance Optimization at Scale",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=300", 
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=300",
         link: "https://www.linkedin.com/company/chegg/",
       },
       {
         title: "Accessibility Standards in React",
-        image: "https://images.unsplash.com/photo-1551288049-bbda48658aba?auto=format&fit=crop&q=80&w=300", 
+        image: "https://images.unsplash.com/photo-1551288049-bbda48658aba?auto=format&fit=crop&q=80&w=300",
         link: "https://www.linkedin.com/company/chegg/",
       }
     ],
@@ -255,7 +265,7 @@ export const education = [
     img: "/cbse.jfif",
     school: "Crescent Public School,Chaliyam",
     date: "2011 - 2012",
-    grade: "92.5%",
+    grade: "9.6 CGPA",
     desc: "I completed my class 10 education at Crescent Public School,Chaliyam",
     degree: "CBSE(X)",
   },
@@ -268,23 +278,29 @@ export const projects = [
     date: "2024",
     description:
       "Developed an autonomous AI agent system capable of performing complex, multi-step research tasks with cited sources. Leveraged vector search for deep context grounding, implementing a self-reflection loop to ensure output quality.",
-    image: "https://miro.medium.com/v2/resize:fit:1200/1*bTccBwB7zT0oK-5mIapNuw.png", // Using placeholder image related to AI
+    image: "https://miro.medium.com/v2/resize:fit:1200/1*bTccBwB7zT0oK-5mIapNuw.png",
     tags: ["LangGraph", "LangChain", "FAISS", "Open-Source LLMs", "Python"],
     category: "AI/GenAI",
     github: "https://github.com/Jaseem8",
     webapp: "",
+    challenge: "Traditional research requires manual searching, reading, and synthesizing across dozens of sources, which is prone to human error and bias.",
+    solution: "Developed an autonomous multi-agent system using LangGraph. Agents perform breadth-first search, evaluate source credibility, and use a self-reflection loop to cross-reference facts before final synthesis.",
+    impact: "Reduced multi-step technical research time by 85% while maintaining a 98% accuracy rate through cited grounding.",
   },
   {
     id: 102,
     title: "Domain-Specific RAG Chatbot",
     date: "2024",
     description:
-      "Built an advanced Retrieval-Augmented Generation (RAG) system integrated with Pinecone and Hybrid-Search techniques to accurately answer domain-specific queries from custom, proprietary knowledge bases. Successfully integrated various open-source Large Language Models to significantly reduce operational inference budgets without compromising on output quality or latency.",
-    image: "https://miro.medium.com/v2/resize:fit:1200/1*7u4F2-Q7R7gM7l8xZk9T1A.jpeg", // Using placeholder image related to RAG
+      "Built an advanced Retrieval-Augmented Generation (RAG) system integrated with Pinecone and Hybrid-Search techniques to accurately answer domain-specific queries from custom, proprietary knowledge bases.",
+    image: "https://miro.medium.com/v2/resize:fit:1200/1*7u4F2-Q7R7gM7l8xZk9T1A.jpeg",
     tags: ["Pinecone", "Hybrid Search", "TypeScript", "LLMs", "RAG"],
     category: "AI/GenAI",
     github: "https://github.com/Jaseem8",
     webapp: "",
+    challenge: "Company proprietary data was siloed in unstructured PDFs, making it inaccessible for real-time customer support queries.",
+    solution: "Implemented a RAG pipeline with Pinecone vector database and hybrid search (BM25 + Semantic). Used chunking strategies to handle long-form legal documents.",
+    impact: "Slashed customer support response times by 70% and enabled 24/7 automated handling of complex technical queries.",
   },
   {
     id: 0,

@@ -167,29 +167,25 @@ export const Span = styled.span`
 
 export const SubTitle = styled.div`
   font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 42px;
-  color: ${({ theme }) => theme.text_primary + 'AA'};
-  max-width: 600px;
-  padding: 16px 20px;
-  background: ${({ theme }) => theme.primary + '10'};
-  border-left: 4px solid ${({ theme }) => theme.primary};
-  border-radius: 4px 12px 12px 4px;
-  backdrop-filter: blur(8px);
+  line-height: 1.8;
+  margin-bottom: 28px;
+  color: ${({ theme }) => theme.text_primary + '99'};
+  max-width: 650px;
   font-weight: 400;
 
   @media (max-width: 960px) {
     text-align: center;
-    border-left: none;
-    border-top: 4px solid ${({ theme }) => theme.primary};
-    border-radius: 12px;
-    padding: 20px;
   }
 
   @media (max-width: 640px) {
-    font-size: 15px;
-    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 1.6;
   }
+`;
+
+export const Highlight = styled.span`
+  color: ${({ theme }) => theme.primary};
+  font-weight: 600;
 `;
 
 const shine = keyframes`
@@ -250,5 +246,73 @@ export const SkillSpan = styled.span`
   padding: 2px 6px;
   background: ${({ theme }) => theme.primary + '15'};
   border-radius: 4px;
+`;
+
+export const ImpactContainer = styled.div`
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+  margin-bottom: 32px;
+  width: 100%;
+  max-width: 650px;
+  
+  @media (max-width: 960px) {
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
+  }
+`;
+
+export const StatCard = styled.div`
+  flex: 1;
+  min-width: 140px;
+  padding: 12px 16px;
+  background: ${({ theme }) => theme.card + '80'};
+  border: 1px solid ${({ theme }) => theme.text_primary + '10'};
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+  cursor: default;
+
+  &:hover {
+    transform: translateY(-5px);
+    border: 1px solid ${({ theme }) => theme.primary};
+    background: ${({ theme }) => theme.card};
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+
+  @media (max-width: 640px) {
+    min-width: 120px;
+    padding: 10px;
+  }
+`;
+
+export const StatIcon = styled.div`
+  font-size: 24px;
+  color: ${({ theme }) => theme.primary};
+  margin-bottom: 4px;
+`;
+
+export const StatValue = styled.div`
+  font-size: 20px;
+  font-weight: 700;
+  color: ${({ theme }) => theme.text_primary};
+
+  @media (max-width: 640px) {
+    font-size: 16px;
+  }
+`;
+
+export const StatLabel = styled.div`
+  font-size: 11px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.text_secondary};
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  text-align: center;
 `;
 

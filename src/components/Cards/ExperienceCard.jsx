@@ -2,6 +2,18 @@ import React, { useState, useEffect } from 'react'
 import styled, { useTheme, keyframes } from 'styled-components'
 import { motion } from 'framer-motion'
 import SkillIcon from '../Icons/SkillIcons'
+import Counter from '../HeroSection/Counter'
+import ZeroToOne from '../HeroSection/ZeroToOne'
+
+const formatText = (text) => {
+    if (!text || typeof text !== 'string') return text;
+    const parts = text.split(/0-to-1/i);
+    if (parts.length === 1) return text;
+    return parts.reduce((acc, part, i) => {
+        if (i === 0) return [part];
+        return [...acc, <ZeroToOne key={i} />, part];
+    }, []);
+};
 
 const Document = styled.img`
     display: none;
@@ -309,7 +321,7 @@ const ExperienceCard = ({ experience }) => {
             </Top>
             <Description>
                 {experience?.desc &&
-                    <Span>{experience?.desc}</Span>
+                    <Span>{formatText(experience?.desc)}</Span>
                 }
             </Description>
             {experience?.achievements &&
@@ -317,7 +329,11 @@ const ExperienceCard = ({ experience }) => {
                     {experience?.achievements?.map((achievement, index) => (
                         <Achievement key={index}>
                             <AchievementIcon>{achievement.icon}</AchievementIcon>
-                            <AchievementText>{achievement.text}</AchievementText>
+                            <AchievementText>
+                                {achievement.text.includes("0-to-1") 
+                                    ? formatText(achievement.text) 
+                                    : <Counter value={achievement.text} color="#B192EF" />}
+                            </AchievementText>
                         </Achievement>
                     ))}
                 </Achievements>

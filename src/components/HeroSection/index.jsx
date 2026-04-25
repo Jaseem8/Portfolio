@@ -13,10 +13,19 @@ import {
   SubTitle,
   ResumeButton,
   SkillSpan,
+  ImpactContainer,
+  StatCard,
+  StatIcon,
+  StatValue,
+  StatLabel,
+  Highlight,
 } from "./HeroStyle";
+import { FaBriefcase, FaUsers, FaGraduationCap, FaChartLine } from 'react-icons/fa';
 import HeroImg from "../../images/HeroImage.jpg";
 import Typewriter from "typewriter-effect";
-import { Bio } from "../../data/constants";
+import { Bio, impactStats } from "../../data/constants";
+import Counter from "./Counter";
+import ZeroToOne from "./ZeroToOne";
 
 const HeroSection = () => {
   return (
@@ -43,8 +52,25 @@ const HeroSection = () => {
               </Span>
             </TextLoop>
             <SubTitle>
-              I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning and a dedicated work ethic, I am committed to delivering high-quality results. With a strong foundation in <SkillSpan style={{ color: '#61DBFB', background: '#61DBFB15' }}>React</SkillSpan>, <SkillSpan style={{ color: '#68A063', background: '#68A06315' }}>Node.js</SkillSpan>, and <SkillSpan style={{ color: '#F59E0B', background: '#F59E0B15' }}>Generative AI</SkillSpan>, I am seeking a position to leverage my expertise and contribute to an innovative team.
+              Senior Software Engineer (Tier 1 graduate) with 7 years of <ZeroToOne /> product development experience. Expert in architecting scalable microservices, integrating <Highlight>Generative AI</Highlight> & <Highlight>RAG</Highlight> systems into production (<Highlight>LangChain</Highlight>, <Highlight>LangGraph</Highlight>), and leading full-stack agile teams (<Highlight>React</Highlight>,<Highlight>Next.js</Highlight>, <Highlight>NestJS</Highlight>, <Highlight>AWS</Highlight>) to scale platforms for <Counter value="900k+" color="#B192EF" /> users.
             </SubTitle>
+
+            <ImpactContainer>
+              {impactStats.map((stat, index) => (
+                <StatCard key={index}>
+                  <StatIcon>
+                    {stat.icon === 'briefcase' && <FaBriefcase />}
+                    {stat.icon === 'users' && <FaUsers />}
+                    {stat.icon === 'education' && <FaGraduationCap />}
+                    {stat.icon === 'chart' && <FaChartLine />}
+                  </StatIcon>
+                  <StatValue>
+                    <Counter value={stat.value} color="#B192EF" />
+                  </StatValue>
+                  <StatLabel>{stat.label}</StatLabel>
+                </StatCard>
+              ))}
+            </ImpactContainer>
             <ResumeButton href={Bio.resume} target="display">
               Check Resume
             </ResumeButton>
