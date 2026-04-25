@@ -137,8 +137,8 @@ export const MobileCallIcon = styled.a`
     justify-content: center;
     font-size: 1.3rem;
     cursor: pointer;
-    color: #b6f9daff;
-    margin-right: 20px;
+    color: #4CC9FE;
+    margin-right: 18px;
     text-decoration: none;
     transition: color 0.2s ease;
     
@@ -146,6 +146,65 @@ export const MobileCallIcon = styled.a`
         color: #a8ffd7ff;
     }
   }
+`;
+
+export const MobileWhatsAppIcon = styled.a`
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: #25D366;
+    margin-right: 18px;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+    
+    &:hover {
+        transform: scale(1.1);
+    }
+  }
+`;
+
+export const MobileEmailIcon = styled.a`
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: ${({ theme }) => theme.primary};
+    margin-right: 18px;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+    
+    &:hover {
+        transform: scale(1.1);
+    }
+  }
+`;
+
+export const DesktopContactIcon = styled.a`
+    color: ${({ color }) => color || 'inherit'};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin-right: 15px;
+    text-decoration: none;
+
+    &:hover {
+        transform: scale(1.1);
+        filter: brightness(1.2);
+    }
+
+    @media (max-width: 768px) {
+        display: none;
+    }
 `;
 
 export const MobileIcon = styled.div`

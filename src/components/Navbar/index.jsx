@@ -1,7 +1,7 @@
 import React from 'react'
-import { Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems, GitHubButton, ButtonContainer, MobileIcon, MobileMenu, MobileNavLogo, MobileLink, AvailabilityBadge, PulseDot, ResumeButton, MobileResumeIcon, MobileCallIcon } from './NavbarStyledComponent'
+import { Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems, GitHubButton, ButtonContainer, MobileIcon, MobileMenu, MobileNavLogo, MobileLink, AvailabilityBadge, PulseDot, ResumeButton, MobileResumeIcon, MobileCallIcon, MobileWhatsAppIcon, MobileEmailIcon, DesktopContactIcon } from './NavbarStyledComponent'
 import { DiCssdeck } from 'react-icons/di';
-import { FaBars, FaDownload, FaPhoneAlt } from 'react-icons/fa';
+import { FaBars, FaDownload, FaPhoneAlt, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
 import { Bio } from '../../data/constants';
 import { useTheme } from 'styled-components';
 import { BsSunFill, BsMoonFill } from 'react-icons/bs';
@@ -28,6 +28,12 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           <MobileCallIcon href={`tel:${Bio.phone}`}>
             <FaPhoneAlt size="18px" />
           </MobileCallIcon>
+          <MobileWhatsAppIcon href={`https://wa.me/${Bio.phone.replace('+', '')}?text=Hi Jaseem, I saw your portfolio and would like to connect!`} target="_blank">
+            <FaWhatsapp size="22px" />
+          </MobileWhatsAppIcon>
+          <MobileEmailIcon href={`mailto:${Bio.email}`}>
+            <FaEnvelope size="20px" />
+          </MobileEmailIcon>
           <FaBars onClick={() => {
             setIsOpen(!isOpen)
           }} />
@@ -43,6 +49,12 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           <div style={{ marginRight: '20px', cursor: 'pointer', color: theme.text_primary, display: 'flex', alignItems: 'center' }} onClick={() => setDarkMode(!darkMode)}>
             {darkMode ? <BsSunFill size="24px" /> : <BsMoonFill size="24px" />}
           </div>
+          <DesktopContactIcon href={`https://wa.me/${Bio.phone.replace('+', '')}?text=Hi Jaseem, I saw your portfolio and would like to connect!`} target="_blank" color="#25D366">
+            <FaWhatsapp />
+          </DesktopContactIcon>
+          <DesktopContactIcon href={`mailto:${Bio.email}`} color={theme.primary}>
+            <FaEnvelope />
+          </DesktopContactIcon>
           <GitHubButton href={Bio.github} target="_blank">Github Profile</GitHubButton>
           <ResumeButton href={Bio.resume} target="_blank">Resume</ResumeButton>
         </ButtonContainer>
