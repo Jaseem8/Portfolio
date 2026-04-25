@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { skills } from "../../data/constants";
+import SkillIcon from "../Icons/SkillIcons";
 
 const Container = styled.div`
   display: flex;
@@ -124,10 +125,7 @@ const SkillItem = styled.div`
   }
 `;
 
-const SkillImage = styled.img`
-  width: 24px;
-  height: 24px;
-`;
+// SkillImage removed in favor of SkillIcon
 
 const Skills = () => {
   return (
@@ -144,8 +142,8 @@ const Skills = () => {
               <SkillTitle>{skill.title}</SkillTitle>
               <SkillList>
                 {skill.skills.map((item) => (
-                  <SkillItem>
-                    <SkillImage src={item.image} />
+                  <SkillItem key={item.name}>
+                    <SkillIcon name={item.name} size={24} />
                     {item.name}
                   </SkillItem>
                 ))}
