@@ -17,6 +17,7 @@ export const Bio = {
   twitter: "https://twitter.com/jaseem_sabith",
   insta: "https://www.instagram.com/jaseem8/",
   facebook: "https://www.facebook.com/jaseem.sabith8/",
+  phone: "+971565798746",
 };
 
 export const impactStats = [

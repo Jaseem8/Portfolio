@@ -1,9 +1,9 @@
 import { Link as LinkR } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import _default from '../../themes/default';
 
 export const Nav = styled.div`
-    background-color: ${({theme}) => theme.bg + 'CC'};
+    background-color: ${({ theme }) => theme.bg + 'CC'};
     backdrop-filter: blur(10px);
     height: 80px;
     display: flex;
@@ -110,19 +110,59 @@ export const ButtonContainer = styled.div`
 `;
 
 
+export const MobileResumeIcon = styled.a`
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: ${({ theme }) => theme.text_primary};
+    margin-right: 20px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    
+    &:hover {
+        color: ${({ theme }) => theme.primary};
+    }
+  }
+`;
+
+export const MobileCallIcon = styled.a`
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: #b6f9daff;
+    margin-right: 20px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    
+    &:hover {
+        color: #a8ffd7ff;
+    }
+  }
+`;
+
 export const MobileIcon = styled.div`
   display: none;
   @media screen and (max-width: 768px) {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
     font-size: 1.5rem;
     cursor: pointer;
     color: ${({ theme }) => theme.text_primary};
   }
-`
+`;
 
 export const MobileMenu = styled.div`
     display: flex;
@@ -134,7 +174,7 @@ export const MobileMenu = styled.div`
     right: 0;
     width: 100%;
     padding: 12px 40px 24px 40px;
-    background: ${({ theme }) => theme.card_light+99};
+    background: ${({ theme }) => theme.card_light + 99};
     transition: all 0.6s ease-in-out;
     transform: ${({ isOpen }) => (isOpen ? 'translateY(0)' : 'translateY(-100%)')};
     border-radius: 0 0 20px 20px;
@@ -191,7 +231,7 @@ export const MobileMenuButton = styled.a`
   }
 `;
 
-export  const MobileLink = styled.a`
+export const MobileLink = styled.a`
   color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
   cursor: pointer;
@@ -215,5 +255,67 @@ export const MobileNavLogo = styled(LinkR)`
   text-decoration: none;
   @media (max-width: 640px) {
     padding: 0 0px;
+  }
+`;
+
+const pulse = keyframes`
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(0, 255, 136, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 255, 136, 0); }
+`;
+
+export const AvailabilityBadge = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #00ff88;
+    background: rgba(0, 255, 136, 0.1);
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin-left: 12px;
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    
+    @media (max-width: 960px) {
+        display: none;
+    }
+`;
+
+export const PulseDot = styled.div`
+    width: 6px;
+    height: 6px;
+    background-color: #00ff88;
+    border-radius: 50%;
+    animation: ${pulse} 2s infinite;
+`;
+
+export const ResumeButton = styled.a`
+  border: 1.8px solid ${({ theme }) => theme.primary};
+  background-color: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.white};
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 70%;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 0 20px;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.6s ease-in-out;
+  margin-left: 12px;
+  
+  &:hover {
+    background: transparent;
+    color: ${({ theme }) => theme.primary};
+  }
+  
+  @media screen and (max-width: 768px) { 
+    font-size: 14px;
+    display: none;
   }
 `;

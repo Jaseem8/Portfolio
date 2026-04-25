@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import SkillIcon from '../Icons/SkillIcons'
 
 
 const Button = styled.button`
@@ -67,12 +68,23 @@ const Tags = styled.div`
 `
 
 const Tag = styled.span`
-    font-size: 12px;
-    font-weight: 400;
-    color: ${({ theme }) => theme.primary};
-    background-color: ${({ theme }) => theme.primary + 15};
-    padding: 2px 8px;
-    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 500;
+    color: ${({ theme }) => theme.text_primary + 'BB'};
+    background-color: ${({ theme }) => theme.text_primary + '08'};
+    padding: 3px 10px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid ${({ theme }) => theme.text_primary + '10'};
+    transition: all 0.2s ease;
+    
+    &:hover {
+        background-color: ${({ theme }) => theme.primary + '15'};
+        border: 1px solid ${({ theme }) => theme.primary + '50'};
+        color: ${({ theme }) => theme.primary};
+    }
 `
 
 const Details = styled.div`
@@ -142,7 +154,10 @@ const ProjectCards = ({project,setOpenModal}) => {
             <Image src={project.image}/>
             <Tags>
                 {project.tags?.map((tag, index) => (
-                <Tag>{tag}</Tag>
+                <Tag key={index}>
+                    <SkillIcon name={tag} size={14} />
+                    {tag}
+                </Tag>
                 ))}
             </Tags>
             <Details>

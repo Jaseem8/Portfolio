@@ -1,7 +1,7 @@
 import React from 'react'
-import { Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems, GitHubButton, ButtonContainer, MobileIcon, MobileMenu, MobileNavLogo, MobileLink } from './NavbarStyledComponent'
+import { Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems, GitHubButton, ButtonContainer, MobileIcon, MobileMenu, MobileNavLogo, MobileLink, AvailabilityBadge, PulseDot, ResumeButton, MobileResumeIcon, MobileCallIcon } from './NavbarStyledComponent'
 import { DiCssdeck } from 'react-icons/di';
-import { FaBars } from 'react-icons/fa';
+import { FaBars, FaDownload, FaPhoneAlt } from 'react-icons/fa';
 import { Bio } from '../../data/constants';
 import { useTheme } from 'styled-components';
 import { BsSunFill, BsMoonFill } from 'react-icons/bs';
@@ -16,8 +16,18 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           <a style={{ display: "flex", alignItems: "center", color: "white", marginBottom: '20;', cursor: 'pointer' }}>
             <DiCssdeck size="3rem" /> <Span>Portfolio</Span>
           </a>
+          <AvailabilityBadge>
+            <PulseDot />
+            Available for Hire
+          </AvailabilityBadge>
         </NavLogo>
         <MobileIcon>
+          <MobileResumeIcon href={Bio.resume} target="_blank">
+            <FaDownload size="20px" />
+          </MobileResumeIcon>
+          <MobileCallIcon href={`tel:${Bio.phone}`}>
+            <FaPhoneAlt size="18px" />
+          </MobileCallIcon>
           <FaBars onClick={() => {
             setIsOpen(!isOpen)
           }} />
@@ -34,6 +44,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             {darkMode ? <BsSunFill size="24px" /> : <BsMoonFill size="24px" />}
           </div>
           <GitHubButton href={Bio.github} target="_blank">Github Profile</GitHubButton>
+          <ResumeButton href={Bio.resume} target="_blank">Resume</ResumeButton>
         </ButtonContainer>
         {
           isOpen &&
@@ -53,7 +64,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             <MobileLink href='#education' onClick={() => {
               setIsOpen(!isOpen)
             }}>Education</MobileLink>
-            <GitHubButton style={{padding: '10px 16px',background: `${theme.primary}`, color: 'white',width: 'max-content'}} href={Bio.github} target="_blank">Github Profile</GitHubButton>
+            <GitHubButton style={{ padding: '10px 16px', background: `${theme.primary}`, color: 'white', width: 'max-content' }} href={Bio.github} target="_blank">Github Profile</GitHubButton>
           </MobileMenu>
         }
       </NavbarContainer>
