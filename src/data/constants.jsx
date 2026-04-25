@@ -202,7 +202,7 @@ export const experiences = [
     role: "Software Engineer - FullStack",
     company: "Comera",
     date: "Dec 2024 – Present",
-    desc: "Architected and launched an event-driven NestJS microservices ecosystem entirely from scratch (0-to-1), driving a 540% increase in active user capacity (140k to 900k+). Slashed infrastructure load and query latency by 40% under heavy loads by architecting intelligent write-through caching mechanisms with Redis and deep-optimizing DynamoDB (DAX). Secured and processed high-value financial data exceeding 50k+ daily transactions with 99.99% reliability via Kafka and BullMQ. Built a real-time analytics dashboard in React 18 & Redux. Achieved 99.9% API uptime SLA containerizing deployments with Docker on AWS.",
+    desc: "Architected and launched a high-performance, event-driven microservices ecosystem for a platform serving 900k+ active users. Led the full-stack development of secure financial transaction pipelines and real-time executive dashboards while maintaining high availability and containerized cloud infrastructure.",
     skills: [
       "NestJS",
       "React 18",
@@ -213,6 +213,12 @@ export const experiences = [
       "Docker",
       "AWS",
     ],
+    achievements: [
+      { icon: "🚀", text: "Scaled active user capacity by 540% (140k to 900k+) from scratch." },
+      { icon: "⚡", text: "Slashed infrastructure load and query latency by 40% via Redis caching." },
+      { icon: "🛡️", text: "Secured 50k+ daily transactions with 99.99% reliability via Kafka/BullMQ." },
+      { icon: "📈", text: "Built real-time analytics, boosting decision speed by 3x." },
+    ],
   },
   {
     id: 2,
@@ -220,7 +226,7 @@ export const experiences = [
     role: "Full Stack Web Developer",
     company: "Chegg",
     date: "Apr 2021 – Nov 2024",
-    desc: "Boosted user retention and core engagement metrics by overhauling React frontend architecture, utilizing Suspense to drive a 20% performance increase. Skyrocketed Core Web Vitals and top-tier SEO rankings by migrating from Webpack to Vite, slashing bundle size by 35%. Led the 0-to-1 development of highly scalable RESTful APIs (Node.js/Express) handling millions of daily requests, engineering advanced Redis caching. Drove a massive 45% reduction in post-release critical bugs by enforcing strict TypeScript and ARIA accessibility standards.",
+    desc: "Optimized large-scale React architectures and built high-traffic RESTful APIs serving millions of requests daily. Focused on frontend performance engineering, SEO optimization, and establishing rigorous engineering standards to improve release quality and developer productivity.",
     skills: [
       "React",
       "TypeScript",
@@ -229,6 +235,12 @@ export const experiences = [
       "Redis",
       "Vite",
     ],
+    achievements: [
+      { icon: "🏎️", text: "Drove 20% performance boost using React Suspense." },
+      { icon: "📦", text: "Reduced bundle size by 35% through Webpack to Vite migration." },
+      { icon: "💾", text: "Accelerated data retrieval by 30% through DB & cache optimization." },
+      { icon: "🐞", text: "Reduced post-release critical bugs by 45% via strict TS standards." },
+    ],
   },
   {
     id: 3,
@@ -236,13 +248,17 @@ export const experiences = [
     role: "Full Stack Web Developer",
     company: "ITJOBXS",
     date: "Jul 2019 – Mar 2021",
-    desc: "Directed the 0-to-1 greenfield development of a high-traffic recruitment platform (React, Node.js), drastically increasing candidate placements by architecting advanced filtering systems and a real-time notification engine from scratch. Completely mitigated critical security vulnerabilities and ensured flawless 100% compliance with data privacy laws by implementing bulletproof authentication flows using JWT, OAuth, and RBAC.",
+    desc: "Directed the greenfield development of a high-traffic recruitment platform, focusing on complex filtering systems and real-time notifications. Implemented secure authentication and authorization protocols to ensure full compliance with global data privacy regulations.",
     skills: [
       "React",
       "Node.js",
       "JWT",
       "OAuth",
       "RBAC",
+    ],
+    achievements: [
+      { icon: "🌱", text: "Led 0-to-1 greenfield development of a high-traffic recruitment platform." },
+      { icon: "🔒", text: "Achieved 100% compliance with data privacy laws via JWT/OAuth/RBAC." },
     ],
   },
 

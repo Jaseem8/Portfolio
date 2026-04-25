@@ -27,11 +27,16 @@ const Card = styled.div`
     display: flex;
     flex-direction: column;
     gap: 14px;
-    transition: all 0.5s ease-in-out;
+    background: ${({ theme }) => theme.card};
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid ${({ theme }) => theme.text_primary + '20'};
+
     &:hover {
         transform: translateY(-10px);
         box-shadow: 0 0 50px 4px rgba(0,0,0,0.6);
         filter: brightness(1.1);
+        border: 1px solid ${({ theme }) => theme.primary};
     }
     &:hover ${Button} {
         display: block;

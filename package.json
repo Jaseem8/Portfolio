@@ -11,6 +11,7 @@
     "@mui/lab": "^5.0.0-alpha.130",
     "@mui/material": "^5.13.1",
     "emailjs": "^4.0.2",
+    "framer-motion": "^12.38.0",
     "gh-pages": "^3.2.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -27,7 +28,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-
   "devDependencies": {
     "@vitejs/plugin-react": "^6.0.1",
     "vite": "^8.0.10"

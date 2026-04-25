@@ -4,8 +4,9 @@ import { DiCssdeck } from 'react-icons/di';
 import { FaBars } from 'react-icons/fa';
 import { Bio } from '../../data/constants';
 import { useTheme } from 'styled-components';
+import { BsSunFill, BsMoonFill } from 'react-icons/bs';
 
-const Navbar = () => {
+const Navbar = ({ darkMode, setDarkMode }) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const theme = useTheme()
   return (
@@ -29,6 +30,9 @@ const Navbar = () => {
           <NavLink href='#education'>Education</NavLink>
         </NavItems>
         <ButtonContainer>
+          <div style={{ marginRight: '20px', cursor: 'pointer', color: theme.text_primary, display: 'flex', alignItems: 'center' }} onClick={() => setDarkMode(!darkMode)}>
+            {darkMode ? <BsSunFill size="24px" /> : <BsMoonFill size="24px" />}
+          </div>
           <GitHubButton href={Bio.github} target="_blank">Github Profile</GitHubButton>
         </ButtonContainer>
         {

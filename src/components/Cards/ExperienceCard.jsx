@@ -36,7 +36,7 @@ text-overflow: ellipsis;
 const Card = styled.div`
     width: 650px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
     padding: 12px 16px;
     justify-content: space-between;
     position: relative;
@@ -45,9 +45,16 @@ const Card = styled.div`
     flex-direction: column;
     gap: 12px;
     transition: all 0.3s ease-in-out;
+    background: ${({ theme }) => theme.card};
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid ${({ theme }) => theme.text_primary + '20'};
+    
     &:hover{
         box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
         transform: translateY(-5px);
+        border: 1px solid ${({ theme }) => theme.primary};
+        filter: brightness(1.1);
     }
     @media only screen and (max-width: 768px){
         padding: 10px;
@@ -62,11 +69,7 @@ const Card = styled.div`
     &:hover ${Span}{
         overflow: visible;
         -webkit-line-clamp: unset;
-
     }
-
-    border: 0.1px solid #306EE8;
-    box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
 `
 
 const Top = styled.div`
@@ -142,6 +145,33 @@ const Skill = styled.div`
     }
 `
 
+const Achievements = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+`
+
+const Achievement = styled.div`
+    display: flex;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    color: ${({ theme }) => theme.text_primary + 99};
+    @media only screen and (max-width: 768px){
+        font-size: 12px;
+    }
+`
+
+const AchievementIcon = styled.span`
+    font-size: 16px;
+`
+
+const AchievementText = styled.span`
+    flex: 1;
+`
+
 
 
 const ExperienceCard = ({ experience }) => {
@@ -158,7 +188,16 @@ const ExperienceCard = ({ experience }) => {
             <Description>
                 {experience?.desc &&
                     <Span>{experience?.desc}</Span>
-
+                }
+                {experience?.achievements &&
+                    <Achievements>
+                        {experience?.achievements?.map((achievement, index) => (
+                            <Achievement key={index}>
+                                <AchievementIcon>{achievement.icon}</AchievementIcon>
+                                <AchievementText>{achievement.text}</AchievementText>
+                            </Achievement>
+                        ))}
+                    </Achievements>
                 }
                 {experience?.skills &&
                     <>
@@ -167,7 +206,7 @@ const ExperienceCard = ({ experience }) => {
                             <b>Skills:</b>
                             <ItemWrapper>
                                 {experience?.skills?.map((skill, index) => (
-                                    <Skill>• {skill}</Skill>
+                                    <Skill key={index}>• {skill}</Skill>
                                 ))}
                             </ItemWrapper>
                         </Skills>

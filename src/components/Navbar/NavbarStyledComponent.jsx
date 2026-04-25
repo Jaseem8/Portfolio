@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import _default from '../../themes/default';
 
 export const Nav = styled.div`
-    background-color: ${({theme}) => theme.card_light};
+    background-color: ${({theme}) => theme.bg + 'CC'};
+    backdrop-filter: blur(10px);
     height: 80px;
     display: flex;
     align-items: center;
