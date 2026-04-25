@@ -16,7 +16,8 @@ const Button = styled.button`
     transition: all 0.8s ease-in-out;
 `
 const Card = styled.div`
-    width: 330px;
+    width: 100%;
+    max-width: 330px;
     height: 490px;
     background-color: ${({ theme }) => theme.card};
     cursor: pointer;
@@ -40,6 +41,11 @@ const Card = styled.div`
     }
     &:hover ${Button} {
         display: block;
+    }
+    @media only screen and (max-width: 768px) {
+        max-width: 100%;
+        height: auto;
+        padding: 16px;
     }
 `
 
@@ -110,6 +116,9 @@ const Description = styled.div`
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
+    @media only screen and (max-width: 768px){
+        -webkit-line-clamp: 5;
+    }
 `
 
 const Members = styled.div`

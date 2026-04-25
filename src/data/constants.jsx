@@ -198,7 +198,7 @@ export const experiences = [
   // },
   {
     id: 1,
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Comera_Logo.png/1200px-Comera_Logo.png",
+    img: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=100",
     role: "Software Engineer - FullStack",
     company: "Comera",
     date: "Dec 2024 – Present",
@@ -219,10 +219,32 @@ export const experiences = [
       { icon: "🛡️", text: "Secured 50k+ daily transactions with 99.99% reliability via Kafka/BullMQ." },
       { icon: "📈", text: "Built real-time analytics, boosting decision speed by 3x." },
     ],
+    highlights: [
+      {
+        title: "Comera scales to 900k+ active users!",
+        image: "https://images.unsplash.com/photo-1551288049-bbda48658aba?auto=format&fit=crop&q=80&w=300", 
+        link: "https://www.linkedin.com/company/comera-app/",
+      },
+      {
+        title: "New Real-time Analytics Dashboard Live",
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=300", 
+        link: "https://www.linkedin.com/company/comera-app/",
+      },
+      {
+        title: "Event-Driven Architecture deep dive",
+        image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=300", 
+        link: "https://www.linkedin.com/company/comera-app/",
+      },
+      {
+        title: "Scaling microservices with Kafka",
+        image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=300", 
+        link: "https://www.linkedin.com/company/comera-app/",
+      }
+    ],
   },
   {
     id: 2,
-    img: "/chegg.jpg",
+    img: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&q=80&w=100",
     role: "Full Stack Web Developer",
     company: "Chegg",
     date: "Apr 2021 – Nov 2024",
@@ -241,10 +263,27 @@ export const experiences = [
       { icon: "💾", text: "Accelerated data retrieval by 30% through DB & cache optimization." },
       { icon: "🐞", text: "Reduced post-release critical bugs by 45% via strict TS standards." },
     ],
+    highlights: [
+      {
+        title: "Engineering Excellence: Migrating to Vite",
+        image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=300", 
+        link: "https://www.linkedin.com/company/chegg/",
+      },
+      {
+        title: "Performance Optimization at Scale",
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=300", 
+        link: "https://www.linkedin.com/company/chegg/",
+      },
+      {
+        title: "Accessibility Standards in React",
+        image: "https://images.unsplash.com/photo-1551288049-bbda48658aba?auto=format&fit=crop&q=80&w=300", 
+        link: "https://www.linkedin.com/company/chegg/",
+      }
+    ],
   },
   {
     id: 3,
-    img: "/itjobxs.jpeg",
+    img: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=100",
     role: "Full Stack Web Developer",
     company: "ITJOBXS",
     date: "Jul 2019 – Mar 2021",
