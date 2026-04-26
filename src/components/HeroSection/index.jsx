@@ -26,6 +26,7 @@ import Typewriter from "typewriter-effect";
 import { Bio, impactStats } from "../../data/constants";
 import Counter from "./Counter";
 import ZeroToOne from "./ZeroToOne";
+import HeroMediaCarousel from "./HeroMediaCarousel";
 
 const HeroSection = () => {
   return (
@@ -77,7 +78,7 @@ const HeroSection = () => {
           </HeroLeftContainer>
 
           <HeroRightContainer id="Right">
-            <Img src={HeroImg} alt="hero-image" />
+            <HeroMediaCarousel />
           </HeroRightContainer>
         </HeroInnerContainer>
       </HeroContainer>

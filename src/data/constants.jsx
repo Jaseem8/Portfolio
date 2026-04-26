@@ -1,5 +1,5 @@
 export const Bio = {
-  name: "Mohammed Jaseem Sabith",
+  name: "Jaseem Sabith",
   roles: [
     "Senior Software Engineer",
     "Full Stack Developer",
@@ -130,25 +130,34 @@ export const experiences = [
     ],
     highlights: [
       {
-        title: "Comera scales to 900k+ active users!",
-        image: "https://images.unsplash.com/photo-1551288049-bbda48658aba?auto=format&fit=crop&q=80&w=300",
-        link: "https://www.linkedin.com/company/comera-app/",
+        title: "Secured Visa Principal Membership",
+        image: "https://media.licdn.com/dms/image/v2/D4D22AQFtKkfjhlxEXQ/feedshare-shrink_800/B4DZlSiAspGQAg-/0/1758026272928?e=1778716800&v=beta&t=7QNKz8eY94ylnDfrtJd9GCUeiGi3BteGOobo-xgqSsQ",
+        link: "https://www.linkedin.com/posts/comera-technology-llc_comerapay-cbuae-royalgroup-activity-7373968652448067584-4bdb?utm_source=share&utm_medium=member_desktop&rcm=ACoAABtq5KQBLsn-76xtht0otJWEEjQiLEsWPGc",
       },
       {
-        title: "New Real-time Analytics Dashboard Live",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=300",
-        link: "https://www.linkedin.com/company/comera-app/",
+        title: "Service Launch with TAMM (Abu Dhabi Govt)",
+        image: "https://media.licdn.com/dms/image/v2/D4D22AQGPmEycOeNC8Q/feedshare-shrink_800/B4DZnhoM0UGwAg-/0/1760427036537?e=1778716800&v=beta&t=wdSBfS8r9WsL-2ht-cNEExajswCxYSvdI4AKDAc3ACw",
+        link: "https://www.linkedin.com/posts/comera-technology-llc_comerapay-tamm-abudhabi-activity-7383766164247666689-cPkH?utm_source=share&utm_medium=member_desktop&rcm=ACoAABtq5KQBLsn-76xtht0otJWEEjQiLEsWPGc",
       },
       {
-        title: "Event-Driven Architecture deep dive",
-        image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=300",
-        link: "https://www.linkedin.com/company/comera-app/",
+        title: "Strategic Partnership with ADNOC",
+        image: "https://media.licdn.com/dms/image/sync/v2/D4D27AQGnsAy82XOd0w/articleshare-shrink_480/B4DZpd0yVsJMAo-/0/1762510711269?e=1777755600&v=beta&t=dMAEfrZAFw5B10rseXVvgouQcFSeNbdu9SlF9Ga0bjU",
+        link: "https://www.linkedin.com/posts/comera-technology-llc_adnoc-partners-with-comera-financial-holdings-activity-7392539369187848192-7_nM?utm_source=share&utm_medium=member_desktop&rcm=ACoAABtq5KQBLsn-76xtht0otJWEEjQiLEsWPGc",
       },
       {
-        title: "Scaling microservices with Kafka",
-        image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=300",
-        link: "https://www.linkedin.com/company/comera-app/",
-      }
+        title: "Merchant Acquiring Launch with AFS",
+        image: "https://media.licdn.com/dms/image/v2/D4D22AQGLmhHXXfiArA/feedshare-shrink_800/B4DZvAwzPlJYAg-/0/1768465590649?e=1778716800&v=beta&t=RQvW7jUD6SCKqy7YFkykDxhBpySIqfisGj5EjYBbVYo",
+        link: "https://www.linkedin.com/posts/comera-technology-llc_fintech-payments-uae-activity-7417482307772645376-SBJW?utm_source=share&utm_medium=member_desktop&rcm=ACoAABtq5KQBLsn-76xtht0otJWEEjQiLEsWPGc",
+      },
+      {
+        title: "Strategic Partnership with Extra Miles",
+        image: "https://media.licdn.com/dms/image/v2/D4D22AQGteTmorgX8ig/feedshare-shrink_800/B4DZ1tRpakKoAc-/0/1775654836137?e=1778716800&v=beta&t=IloniHqGKkrIbxEGyy_pZdl_3ywMZE73tg2uvBUGeKE",
+        link: "https://www.linkedin.com/posts/comera-technology-llc_comera-comerapay-extramiles-activity-7447636187919474688-utHS?utm_source=share&utm_medium=member_desktop&rcm=ACoAABtq5KQBLsn-76xtht0otJWEEjQiLEsWPGc"
+      },
+      {
+        title: "Strategic Collaboration with MBME Group",
+        image: "https://media.licdn.com/dms/image/v2/D4D22AQHiLKzF6GXELg/feedshare-shrink_800/B4DZ1JcdEfJ4Ag-/0/1775053689616?e=1778716800&v=beta&t=fgBQJZE9Ht7yXXJ02vSXtztF-_KHSbD3KUa9VFfYwWk",
+link:"https://www.linkedin.com/posts/comera-technology-llc_comera-mbme-partnership-activity-7445114806312820738-ffOZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAABtq5KQBLsn-76xtht0otJWEEjQiLEsWPGc"      }
     ],
   },
   {
@@ -169,19 +178,24 @@ export const experiences = [
     ],
     highlights: [
       {
-        title: "Engineering Excellence: Migrating to Vite",
-        image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=300",
-        link: "https://www.linkedin.com/company/chegg/",
+        title: "Launch of CheggMate (GPT-4)",
+        image: "https://s21.q4cdn.com/596622263/files/doc_news/Captura-de-pantalla-2023-04-18-a-la-s-6-24-23.png",
+        link: "https://investor.chegg.com/Press-Releases/press-release-details/2023/Chegg-announces-CheggMate-the-new-AI-companion-built-with-GPT-4/default.aspx",
       },
       {
-        title: "Performance Optimization at Scale",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=300",
-        link: "https://www.linkedin.com/company/chegg/",
+        title: "Busuu Acquisition & Integration ($436M)",
+        image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80&w=300",
+        link: "https://www.chegg.com/about/press-releases/chegg-completes-acquisition-of-busuu/",
       },
+      // {
+      //   title: "Scaling to 8.2M Subscribers",
+      //   image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=300",
+      //   link: "https://investor.chegg.com/press-releases/press-release-details/2022/Chegg-Reports-Fourth-Quarter-and-Full-Year-2021-Financial-Results/default.aspx",
+      // },
       {
-        title: "Accessibility Standards in React",
-        image: "https://images.unsplash.com/photo-1551288049-bbda48658aba?auto=format&fit=crop&q=80&w=300",
-        link: "https://www.linkedin.com/company/chegg/",
+        title: "Proprietary LLM Partnership with Scale AI",
+        image: "https://scale.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F50zba0eo%2Fproduction%2Fb5f9d21489805d9b197992e7aa9788e1f3af165c-1200x630.jpg%3Fauto%3Dformat%26q%3D80&w=1920&q=75",
+        link: "https://scale.com/blog/chegg-scale-custom-llms-partnership",
       }
     ],
   },

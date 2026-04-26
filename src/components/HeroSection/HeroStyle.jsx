@@ -80,6 +80,7 @@ export const HeroRightContainer = styled.div`
   order: 2;
   justify-content: end;
   gap: 12px;
+  position: relative;
   @media (max-width: 960px) {
     order: 1;
     justify-content: center;
