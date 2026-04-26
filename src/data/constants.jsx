@@ -291,12 +291,12 @@ export const projects = [
   {
     id: 101,
     title: "Multi-Agent Research Assistant",
-    date: "2024",
+    date: "2026",
     description:
       "Developed an autonomous AI agent system capable of performing complex, multi-step research tasks with cited sources. Leveraged vector search for deep context grounding, implementing a self-reflection loop to ensure output quality.",
-    image: "https://miro.medium.com/v2/resize:fit:1200/1*bTccBwB7zT0oK-5mIapNuw.png",
+    image: "https://media.licdn.com/dms/image/v2/D4E22AQGj6mWvgAOu6g/feedshare-shrink_800/B4EZflJ5HvHsAg-/0/1751896269123?e=2147483647&v=beta&t=ZOfpivhOsR6Sas2_MxuVcYt_ItTn5zxRKJXRolk2JN8",
     tags: ["LangGraph", "LangChain", "FAISS", "Open-Source LLMs", "Python"],
-    category: "AI/GenAI",
+    category: "AI",
     github: "https://github.com/Jaseem8",
     webapp: "",
     challenge: "Traditional research requires manual searching, reading, and synthesizing across dozens of sources, which is prone to human error and bias.",
@@ -306,12 +306,12 @@ export const projects = [
   {
     id: 102,
     title: "Domain-Specific RAG Chatbot",
-    date: "2024",
+    date: "2026",
     description:
       "Built an advanced Retrieval-Augmented Generation (RAG) system integrated with Pinecone and Hybrid-Search techniques to accurately answer domain-specific queries from custom, proprietary knowledge bases.",
-    image: "https://miro.medium.com/v2/resize:fit:1200/1*7u4F2-Q7R7gM7l8xZk9T1A.jpeg",
+    image: "https://kairntech.com/wp-content/uploads/2025/03/rag-chatbot-trustworthy-ai-2.jpg",
     tags: ["Pinecone", "Hybrid Search", "TypeScript", "LLMs", "RAG"],
-    category: "AI/GenAI",
+    category: "AI",
     github: "https://github.com/Jaseem8",
     webapp: "",
     challenge: "Company proprietary data was siloed in unstructured PDFs, making it inaccessible for real-time customer support queries.",

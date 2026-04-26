@@ -48,6 +48,16 @@ const Projects = ({ openModal, setOpenModal }) => {
             </ToggleButton>
           )}
           <Divider />
+          {toggle === "AI" ? (
+            <ToggleButton active value="AI" onClick={() => setToggle("AI")}>
+              AI
+            </ToggleButton>
+          ) : (
+            <ToggleButton value="AI" onClick={() => setToggle("AI")}>
+              AI
+            </ToggleButton>
+          )}
+          <Divider />
           {toggle === "android app" ? (
             <ToggleButton
               active
