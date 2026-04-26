@@ -77,8 +77,11 @@ const Top = styled.div`
 
 const Image = styled.img`
     height: 50px;
-    background-color: #000;
-    border-radius: 10px;
+    width: auto;
+    max-width: 100px;
+    background-color: transparent;
+    border-radius: 4px;
+    object-fit: contain;
     margin-top: 4px;
     @media only screen and (max-width: 768px){
         height: 40px;
@@ -130,18 +133,33 @@ const Grade = styled.div`
 
 
 
+import { FiExternalLink } from 'react-icons/fi'
+
+const TopLink = styled.a`
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+        cursor: pointer;
+    }
+`
+
 const EducationCard = ({ education }) => {
     return (
         <Card>
-            <Top>
+            <TopLink href={education.schoolLink} target="_blank">
                 <Image src={education.img} />
                 <Body>
                     <Name>{education.school}</Name>
                     <Degree>{education.degree}</Degree>
                     <Date>{education.date}</Date>
                 </Body>
-            </Top>
-            <Grade><b>Grade: </b><Counter value={education.grade} color="#B192EF" /></Grade>
+            </TopLink>
+            <Grade><b>Grade: </b><Counter value={education.grade} color="#B192EF" />
+                {education.schoolLink && <FiExternalLink size={12} style={{ marginLeft: '8px', opacity: 0.8, verticalAlign: 'middle' }} />}
+            </Grade>
             <Description>
                 <Span>{education.desc}</Span>
             </Description>

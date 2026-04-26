@@ -101,21 +101,12 @@ export const experiences = [
   //   skills: ["HTMl", "CSS", "React", "JavaScript", "TypeScript", "Node Js"],
   //   // doc: "https://media.licdn.com/dms/image/D4D2DAQFlp60ZqHuaFQ/profile-treasury-image-shrink_1280_1280/0/1691180828512?e=1692381600&v=beta&t=mM5Y_NE5EPlQhez5FAN6NLVSKcO_Ojt_9Gq3mnFGkAQ",
   // },
-  // {
-  //   id: 0,
-  //   img: "/chegg.jpg",
-  //   role: "Subject Matter Expert",
-  //   company: "Chegg",
-  //   date: "February 2020 - May 2023",
-  //   desc: "I mentored mechanical engineering college students, aiding their understanding of complex concepts, offering detailed assignment feedback for improved clarity and quality, and nurturing proficient problem-solving and analytical skills within an engineering framework.",
-  //   skills: ["Problem Solving", "Mentoring", "Mechanical Engineering"],
-  //   // doc: "https://firebasestorage.googleapis.com/v0/b/buckoid-917cf.appspot.com/o/Screenshot%20from%202023-05-28%2023-20-46.png?alt=media&token=5570f995-e8f4-4f12-bb2f-73bcf4b20730",
-  // },
   {
     id: 1,
-    img: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=100",
-    role: "Software Engineer - FullStack",
+    img: "https://mycomera.com/images/mycomera-logo.png",
     company: "Comera",
+    companyLink: "https://mycomera.com/",
+    companyColor: "#2196f3",
     date: "Dec 2024 – Present",
     desc: "Architected and launched an event-driven NestJS microservices ecosystem entirely from scratch (0-to-1), driving a 540% increase in active user capacity (140k to 900k+) while sustaining zero downtime during peak surges.",
     skills: [
@@ -162,9 +153,11 @@ link:"https://www.linkedin.com/posts/comera-technology-llc_comera-mbme-partnersh
   },
   {
     id: 2,
-    img: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&q=80&w=100",
+    img: "https://chegg-mobile-promotions.cheggcdn.com/px/Chegg-logo-79X22.png",
     role: "Full Stack Web Developer",
     company: "Chegg",
+    companyLink: "https://www.chegg.com/",
+    companyColor: "#ff9800",
     date: "Apr 2021 – Nov 2024",
     desc: "Optimized large-scale React architectures and built high-traffic RESTful APIs serving millions of requests daily. Focused on frontend performance engineering, SEO optimization, and establishing rigorous engineering standards to improve release quality and developer productivity.",
     skills: [
@@ -204,6 +197,7 @@ link:"https://www.linkedin.com/posts/comera-technology-llc_comera-mbme-partnersh
     img: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=100",
     role: "Full Stack Web Developer",
     company: "ITJOBXS",
+    companyLink: "https://itjobxs.com/",
     date: "Jul 2019 – Mar 2021",
     desc: "Directed the greenfield development of a high-traffic recruitment platform, focusing on complex filtering systems and real-time notifications. Implemented secure authentication and authorization protocols to ensure full compliance with global data privacy regulations.",
     skills: [
@@ -262,6 +256,7 @@ export const education = [
     id: 0,
     img: "/NIT.png",
     school: "National Institute Of Technology (NIT), Calicut",
+    schoolLink: "https://www.nitc.ac.in/",
     date: "Aug 2015 - May 2019",
     grade: "7.55 CGPA",
     desc: "Graduated from Tier-1 college with a strong foundation in Computer Science principles, Data Structures, Algorithms, and Software Engineering methodologies.",

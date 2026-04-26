@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled, { useTheme, keyframes } from 'styled-components'
 import { motion } from 'framer-motion'
+import { FiExternalLink } from 'react-icons/fi'
 import SkillIcon from '../Icons/SkillIcons'
 import Counter from '../HeroSection/Counter'
 import ZeroToOne from '../HeroSection/ZeroToOne'
@@ -86,22 +87,27 @@ const Card = styled.div`
     }
 `
 
-const Top = styled.div`
+const TopLink = styled.a`
     width: 100%;
     display: flex;
     gap: 12px;
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+        cursor: pointer;
+    }
 `
 
 const Image = styled.img`
     height: 40px;
-    width: 40px;
-    background-color: #000;
-    border-radius: 8px;
-    object-fit: cover;
+    width: auto;
+    max-width: 80px;
+    background-color: transparent;
+    border-radius: 4px;
+    object-fit: contain;
     margin-top: 4px;
     @media only screen and (max-width: 768px){
         height: 32px;
-        width: 32px;
     }
 `
 
@@ -124,7 +130,9 @@ const Role = styled.div`
 const Company = styled.div`
     font-size: 14px;
     font-weight: 500;
-    color: ${({ theme }) => theme.text_secondary + 99};
+    color: ${({ color, theme }) => color || theme.text_secondary + 99};
+    display: flex;
+    align-items: center;
     @media only screen and (max-width: 768px){
         font-size: 12px;
     }
@@ -313,14 +321,17 @@ const ExperienceCard = ({ experience }) => {
 
     return (
         <Card>
-            <Top>
+            <TopLink href={experience.companyLink} target="_blank">
                 <Image src={experience.img} />
                 <Body>
                     <Role>{experience.role}</Role>
-                    <Company>{experience.company}</Company>
+                    <Company color={experience.companyColor}>
+                        {experience.company}
+                        {experience.companyLink && <FiExternalLink size={12} style={{ marginLeft: '4px', opacity: 0.8 }} />}
+                    </Company>
                     <Date>{experience.date}</Date>
                 </Body>
-            </Top>
+            </TopLink>
             <Description>
                 {experience?.desc &&
                     <Span>{formatText(experience?.desc)}</Span>
