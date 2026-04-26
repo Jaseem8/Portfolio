@@ -30,7 +30,21 @@ const Wrapper = styled.div`
 function App() {
   const [darkMode, setDarkMode] = useState(true);
   const [openModal, setOpenModal] = useState({ state: false, project: null });
-  console.log(openModal)
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      // Delay to ensure all dynamic content and animations are ready
+      const timeoutId = setTimeout(() => {
+        const id = hash.replace("#", "");
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 800);
+      return () => clearTimeout(timeoutId);
+    }
+  }, []);
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <Router >
