@@ -116,15 +116,23 @@ export const MobileResumeIcon = styled.a`
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 11px;
+    font-weight: 800;
     cursor: pointer;
-    color: ${({ theme }) => theme.text_primary};
-    margin-right: 20px;
+    background: ${({ theme }) => theme.primary};
+    color: white;
+    padding: 3px 10px;
+    border-radius: 6px;
+    margin-right: 15px;
     text-decoration: none;
-    transition: color 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     
     &:hover {
-        color: ${({ theme }) => theme.primary};
+        filter: brightness(1.1);
+        transform: scale(1.05);
     }
   }
 `;

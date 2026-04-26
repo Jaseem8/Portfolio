@@ -23,7 +23,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         </NavLogo>
         <MobileIcon>
           <MobileResumeIcon href={Bio.resume} target="_blank" download="Jaseem_Sabith_Software_Engineer_7_YOE.pdf">
-            <FaDownload size="20px" />
+            Resume
           </MobileResumeIcon>
           <MobileCallIcon href={`tel:${Bio.phone}`}>
             <FaPhoneAlt size="18px" />
