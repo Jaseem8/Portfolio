@@ -195,6 +195,7 @@ const shine = keyframes`
   100% { left: 100%; }
 `;
 
+
 export const ResumeButton = styled.a`
     -webkit-appearance: button;
     -moz-appearance: button;

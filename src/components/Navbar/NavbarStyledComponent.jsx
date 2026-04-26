@@ -323,6 +323,7 @@ const pulse = keyframes`
   100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 255, 136, 0); }
 `;
 
+
 export const AvailabilityBadge = styled.div`
     display: flex;
     align-items: center;
@@ -353,8 +354,8 @@ export const PulseDot = styled.div`
 
 export const ResumeButton = styled.a`
   border: 1.8px solid ${({ theme }) => theme.primary};
-  background-color: ${({ theme }) => theme.primary};
-  color: ${({ theme }) => theme.white};
+  background: ${({ theme }) => theme.primary};
+  color: #FFFFFF;
   justify-content: center;
   display: flex;
   align-items: center;

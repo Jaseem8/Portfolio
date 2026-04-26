@@ -22,7 +22,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           </AvailabilityBadge>
         </NavLogo>
         <MobileIcon>
-          <MobileResumeIcon href={Bio.resume} target="_blank">
+          <MobileResumeIcon href={Bio.resume} target="_blank" download="Jaseem_Sabith_Software_Engineer_7_YOE.pdf">
             <FaDownload size="20px" />
           </MobileResumeIcon>
           <MobileCallIcon href={`tel:${Bio.phone}`}>
@@ -56,7 +56,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             <FaEnvelope />
           </DesktopContactIcon>
           <GitHubButton href={Bio.github} target="_blank">Github</GitHubButton>
-          <ResumeButton href={Bio.resume} target="_blank">Resume</ResumeButton>
+          <ResumeButton href={Bio.resume} target="_blank" download="Jaseem_Sabith_Software_Engineer_7_YOE.pdf">Resume</ResumeButton>
         </ButtonContainer>
         {
           isOpen &&

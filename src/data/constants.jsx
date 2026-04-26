@@ -11,8 +11,7 @@ export const Bio = {
   description:
     "Senior Software Engineer (Tier 1 graduate) with 7 years of 0-to-1 product development experience. Expert in architecting scalable microservices, integrating Generative AI & RAG systems into production, and leading full-stack agile teams (TypeScript, Python, NestJS, React, AWS) to scale platforms for 900k+ users.",
   github: "https://github.com/jaseem8",
-  resume:
-    "https://drive.google.com/file/d/1QhaCJJbagAtXFVta282CzCgNXcUbFlWb/view?usp=drive_link",
+  resume: "/resume/jaseem_software_engineer-7_YOE.pdf",
   linkedin: "https://www.linkedin.com/in/jaseem123/",
   twitter: "https://twitter.com/jaseem_sabith",
   insta: "https://www.instagram.com/jaseem8/",

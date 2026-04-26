@@ -72,7 +72,7 @@ const HeroSection = () => {
                 </StatCard>
               ))}
             </ImpactContainer>
-            <ResumeButton href={Bio.resume} target="display">
+            <ResumeButton href={Bio.resume} target="_blank" download="Jaseem_Sabith_Software_Engineer_7_YOE.pdf">
               Check Resume
             </ResumeButton>
           </HeroLeftContainer>
