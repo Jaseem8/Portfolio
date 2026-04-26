@@ -320,7 +320,7 @@ const ExperienceCard = ({ experience }) => {
     };
 
     return (
-        <Card>
+        <Card id={experience.company.toLowerCase()}>
             <TopLink href={experience.companyLink} target="_blank">
                 <Image src={experience.img} />
                 <Body>

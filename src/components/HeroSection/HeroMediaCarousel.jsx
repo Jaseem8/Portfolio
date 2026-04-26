@@ -128,7 +128,7 @@ const HeroMediaCarousel = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }, 3000);
     return () => clearInterval(timer);
   }, [slides.length]);
 
@@ -147,7 +147,7 @@ const HeroMediaCarousel = () => {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 1.05 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.4 }}
           onClick={() => current.isProfile ? window.open(academicRank.link, '_blank') : window.open(current.link, '_blank')}
           style={{ cursor: 'pointer' }}
         >
@@ -161,7 +161,7 @@ const HeroMediaCarousel = () => {
           <Overlay
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+            transition={{ delay: 0.1 }}
           >
             <MilestoneCompany style={current.isProfile ? { color: '#FFD700' } : {}}>
               {current.isProfile ? "Academic Achievement" : current.company}

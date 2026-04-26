@@ -104,6 +104,7 @@ export const experiences = [
   {
     id: 1,
     img: "https://mycomera.com/images/mycomera-logo.png",
+    role: "Software Engineer - FullStack",
     company: "Comera",
     companyLink: "https://mycomera.com/",
     companyColor: "#2196f3",

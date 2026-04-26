@@ -1,7 +1,7 @@
 {
   "name": "jaseem_sabith_portfolio",
   "version": "0.1.0",
-  "homepage": "https://jaseem8.github.io",
+  "homepage": "https://jaseem8.github.io/",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
@@ -26,7 +26,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build -r https://github.com/Jaseem8/jaseem8.github.io.git -b main"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^6.0.1",
