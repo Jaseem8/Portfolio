@@ -32,18 +32,32 @@ function App() {
   const [openModal, setOpenModal] = useState({ state: false, project: null });
 
   useEffect(() => {
-    const hash = window.location.hash;
-    if (hash) {
-      // Delay to ensure all dynamic content and animations are ready
-      const timeoutId = setTimeout(() => {
+    const scrollToHash = () => {
+      const hash = window.location.hash;
+      if (hash) {
         const id = hash.replace("#", "");
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-      }, 800);
-      return () => clearTimeout(timeoutId);
-    }
+        // Longer delay to ensure layout has fully shifted and images are loaded
+        setTimeout(() => {
+          const element = document.getElementById(id);
+          if (element) {
+            const offset = 120; // Exact offset for your sticky header
+            const bodyRect = document.body.getBoundingClientRect().top;
+            const elementRect = element.getBoundingClientRect().top;
+            const elementPosition = elementRect - bodyRect;
+            const offsetPosition = elementPosition - offset;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: "smooth"
+            });
+          }
+        }, 1200);
+      }
+    };
+
+    scrollToHash();
+    window.addEventListener("hashchange", scrollToHash);
+    return () => window.removeEventListener("hashchange", scrollToHash);
   }, []);
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
