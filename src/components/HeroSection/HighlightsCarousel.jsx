@@ -71,9 +71,23 @@ const HighlightTitle = styled.div`
 `;
 
 const CompanyName = styled.div`
-  font-size: 11px;
-  color: ${({ theme }) => theme.primary};
-  font-weight: 500;
+  font-size: 9px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 6px;
+  width: max-content;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 4px;
+  
+  background: ${({ company, theme }) => {
+    const name = company?.toLowerCase() || '';
+    if (name.includes('comera')) return '#007AFF';
+    if (name.includes('chegg')) return '#FF9900';
+    return theme.primary;
+  }};
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 `;
 
 const Dots = styled.div`
@@ -131,7 +145,7 @@ const HighlightsCarousel = () => {
         >
           <HighlightImage src={currentHighlight.image} alt={currentHighlight.title} />
           <Content>
-            <CompanyName>{currentHighlight.company}</CompanyName>
+            <CompanyName company={currentHighlight.company}>{currentHighlight.company}</CompanyName>
             <HighlightTitle>{currentHighlight.title}</HighlightTitle>
           </Content>
         </motion.div>

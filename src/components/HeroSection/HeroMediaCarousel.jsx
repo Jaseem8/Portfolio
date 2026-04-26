@@ -74,12 +74,26 @@ const MilestoneTitle = styled.div`
 `;
 
 const MilestoneCompany = styled.div`
-  font-size: 8px;
+  font-size: 9px;
   text-transform: uppercase;
-  color: ${({ theme }) => theme.primary};
-  margin-bottom: 2px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  padding: 3px 10px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  width: max-content;
+  
+  /* Solid Milestone Styling */
+  background: ${({ company, isProfile, theme }) => {
+    if (isProfile) return '#FFD700';
+    const name = company?.toLowerCase() || '';
+    if (name.includes('comera')) return '#007AFF';
+    if (name.includes('chegg')) return '#FF9900';
+    return theme.primary;
+  }};
+  
+  color: ${({ isProfile }) => (isProfile ? '#000' : '#FFF')};
 `;
 
 const Badge = styled.div`
@@ -163,7 +177,10 @@ const HeroMediaCarousel = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
           >
-            <MilestoneCompany style={current.isProfile ? { color: '#FFD700' } : {}}>
+            <MilestoneCompany 
+              company={current.company} 
+              isProfile={current.isProfile}
+            >
               {current.isProfile ? "Academic Achievement" : current.company}
             </MilestoneCompany>
             <MilestoneTitle>
