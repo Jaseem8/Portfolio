@@ -1,0 +1,210 @@
+%-------------------------
+% Resume in Latex - Two Page Detailed Version
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,12pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins for a two page layout (give it a bit more breathing room than 1 page)
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\Large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-2pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{4pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{2pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-2pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{2pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Mohammed Jaseem Sabith} \\ \vspace{2pt}
+    \large Senior Frontend \& Full Stack Engineer $|$ React \& Next.js Expert \\ \vspace{2pt}
+    \small \raisebox{-0.1\height}\faPhone\ \href{tel:+971565798746}{+971-565798746} ~ \href{mailto:jaseemSabith@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{jaseemSabith@gmail.com}} ~ 
+    \href{https://www.linkedin.com/in/jaseem123/}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/jaseem123}} \\ \vspace{0pt}
+    \href{https://github.com/Jaseem8}{\raisebox{-0.2\height}\faGithub\ \underline{GitHub}} ~
+    \href{https://jaseem8.github.io/}{\raisebox{-0.2\height}\faGlobe\ \underline{Portfolio}}
+    \vspace{-4pt}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Professional Summary}
+\vspace{-2pt}
+\small{
+    Senior Frontend \& Full Stack Engineer (\textbf{Tier 1 graduate}) with 7 years of expertise in building high-performance, scalable web applications. Expert in architecting production-grade \textbf{React 18 \& Next.js} ecosystems, optimizing \textbf{Core Web Vitals}, and engineering complex state management systems. Proven track record of scaling digital platforms to \textbf{900k+ users} with a focus on seamless UX and robust technical architecture.
+}
+\vspace{-6pt}
+
+%-----------TECHNICAL SKILLS-----------
+% RULE: Each bullet point entry in this section must have EXACTLY 162-164 visible characters in total (including spaces and the category name).
+\section{Technical Skills \& Technologies}
+\vspace{-2pt}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \item \small{
+    \begin{tabularx}{\linewidth}{@{}l X@{}}
+     \textbf{AI \& GenAI}: & RAG, LangChain, LangGraph, LLMs, NLP, Vector Databases (Pinecone, FAISS, ChromaDb), Prompt Engineering, Multi-Agent Systems, Custom Model Fine-Tuning. \\ \vspace{2pt}
+     \textbf{Backend \& Cloud}: & NestJS, Node.js, Express.js, Microservices, Event-Driven (Kafka, BullMQ), AWS (S3, EC2, ECS), RESTful APIs, Redis, Docker, Nginx, Containerization. \\ \vspace{2pt}
+     \textbf{Frontend}: & React 18, Next.js, Redux Toolkit, JavaScript, TypeScript, Tailwind CSS, Material-UI, Webpack, Vite, HTML5, CSS3, Responsive UI/UX Design, Accessibility. \\ \vspace{2pt}
+     \textbf{Databases}: & MongoDB, PostgreSQL, Amazon DynamoDB (DAX), MySQL, Firebase Firestore, Apache Cassandra, Redis In-Memory, SQLite3, Graph DBs, Relational and NoSQL DBs. \\ \vspace{2pt}
+     \textbf{Tools \& Infra}: & CI/CD Pipelines, Git Version Control, Linux, Agile/Scrum, Jira, New Relic, System Architecture, Kibana, WebSockets, Winston, PayPal API, Postman API.
+    \end{tabularx}
+    }
+ \end{itemize}
+ \vspace{-6pt}
+
+%-----------EXPERIENCE PAGE 1-----------
+\section{Professional Experience}
+\vspace{-2pt}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Engineer - FullStack}{Dec 2024 -- Present}
+      {\href{https://mycomera.com/}{Comera}}{Abu Dhabi, United Arab Emirates}
+      \resumeItemListStart
+        \resumeItem{\textbf{0-to-1 Dashboard Architecture:} Designed and built a high-performance real-time analytics dashboard from the ground up using \textbf{React 18 \& Redux Toolkit}, enabling executive tracking of wallet KPIs with interactive, optimized \textbf{ApexCharts}.}
+        \resumeItem{\textbf{Security-First Frontend:} Fortified application security by implementing robust \textbf{OAuth2/JWT} authentication flows and engineering sophisticated role-based access control (\textbf{RBAC}) for the executive administrative suite.}
+        \resumeItem{\textbf{Scalable Frontend Design:} Engineered a modular, reusable component library adhering to \textbf{Atomic Design} principles, accelerating internal feature delivery speed by \textbf{3x} and ensuring consistent UX across fintech product suites.}
+        \resumeItem{\textbf{Full-Stack Performance:} Slashed system latency by \textbf{40\%} by architecting an event-driven \textbf{NestJS} microservices ecosystem on \textbf{AWS}, sustaining zero downtime for \textbf{900k+} users during high-volume transaction surges.}
+        \resumeItem{\textbf{Real-Time Synchronization:} Engineered a seamless real-time user experience for high-stakes financial data by implementing sophisticated \textbf{WebSocket} integrations and \textbf{Optimistic UI} update patterns, ensuring zero-latency feedback for critical user actions.}
+        \resumeItem{\textbf{Institutional Milestones:} Contributed to the engineering ecosystem during the implementation of \textbf{Visa Principal Membership}, \textbf{TAMM (Abu Dhabi Govt)} integration, and \textbf{ADNOC} partnership; product featured in \textbf{WAM and Zawya}.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Full Stack Web Developer}{Apr 2021 -- Nov 2024}
+      {\href{https://www.chegg.com/}{Chegg}}{New Delhi, India}
+      \resumeItemListStart
+        \resumeItem{\textbf{Frontend Performance \& SEO:} Boosted user retention by overhauling \textbf{React} architecture, utilizing Suspense to eliminate FID bottlenecks and orchestrating a massive migration from \textbf{Webpack to Vite}, slashing bundle size by \textbf{35\%}.}
+        \resumeItem{\textbf{Leadership \& Code Quality:} Directed a team of developers to reduce post-release critical bugs by \textbf{45\%}, establishing rigorous \textbf{TypeScript} and \textbf{ARIA} accessibility standards while mentoring juniors on modern React patterns.}
+        \resumeItem{\textbf{0-to-1 Greenfield API Design:} Led the 0-to-1 development of highly scalable RESTful APIs (\textbf{Node.js}) handling \textbf{millions of daily requests}, heavily optimizing complex database queries to accelerate data retrieval by \textbf{30\%}.}
+        \resumeItem{\textbf{\href{https://jaseem8.github.io/\#chegg}{Institutional Milestones:}} Part of the engineering organization during the launch of \textbf{CheggMate (GPT-4)}, the \textbf{\$436M Busuu acquisition}, and the strategic \textbf{Scale AI partnership} for proprietary LLM development.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Full Stack Web Developer}{Jul 2019 -- Mar 2021}
+      {\href{https://itjobxs.com/}{ITJOBXS}}{Remote}
+      \resumeItemListStart
+        \resumeItem{\textbf{0-to-1 Platform Development:} Directed the 0-to-1 greenfield development of a high-traffic recruitment platform (\textbf{React, Node.js}), drastically increasing candidate placements by architecting advanced filtering systems and a real-time notification engine from scratch.}
+        \resumeItem{\textbf{Security \& Authentication:} Completely mitigated critical security vulnerabilities and ensured flawless \textbf{100\% compliance} with data privacy laws by implementing bulletproof authentication flows using \textbf{JWT, OAuth, and RBAC}.}
+      \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
+\vspace{-6pt}
+
+%-----------PROJECTS-----------
+\section{Key AI \& Technical Projects}
+\vspace{-2pt}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Multi-Agent Research Assistant} $|$ \emph{LangGraph, LangChain, FAISS, Open-Source LLMs}}{}
+          \resumeItemListStart
+            \resumeItem{Developed an autonomous \textbf{Multi-Agent Research} system using \textbf{LangGraph}, capable of performing complex, multi-step tasks with fully cited sources.}
+            \resumeItem{Implemented a \textbf{Self-Reflection Loop} and context-aware grading to ensure output quality, leveraging vector search for deep grounding.}
+          \resumeItemListEnd
+          \vspace{4pt}
+
+      \resumeProjectHeading
+          {\textbf{Domain-Specific RAG Chatbot} $|$ \emph{Pinecone, Hybrid Search, TypeScript}}{}
+          \resumeItemListStart
+            \resumeItem{Built an advanced \textbf{RAG} system using \textbf{Pinecone} and \textbf{Hybrid Search (BM25 + Semantic)} to accurately answer domain-specific queries from proprietary knowledge bases.}
+            \resumeItem{Orchestrated open-source LLM integrations to reduce operational inference costs while maintaining sub-second latency for complex technical document retrieval.}
+          \resumeItemListEnd 
+    \resumeSubHeadingListEnd
+\vspace{-6pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+\vspace{-2pt}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {National Institute Of Technology (NIT)}{Calicut, Kerala}
+      {Bachelor of Technology (B.Tech) - \textbf{7.55 CGPA}}{Aug 2015 -- May 2019}
+      \resumeItemListStart
+        \resumeItem{Achieved \textbf{\href{https://www.university.youth4work.com/nit_calicut_national-institute-of-technology-calicut/report/5}{Rank 6}} in \textbf{Top Students} institution-wide across all years and streams, demonstrating consistent academic excellence at a Tier-1 national institution.}
+        
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-6pt}
+
+\end{document}
