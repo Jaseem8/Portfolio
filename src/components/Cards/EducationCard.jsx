@@ -35,7 +35,8 @@ text-overflow: ellipsis;
 `
 
 const Card = styled.div`
-    width: 650px;
+    width: 100%;
+    max-width: 650px;
     border-radius: 10px;
     box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
     padding: 12px 16px;
@@ -53,7 +54,7 @@ const Card = styled.div`
     @media only screen and (max-width: 768px){
         padding: 10px;
         gap: 8px;
-        width: 300px;
+        max-width: 100%;
     }
 
     &:hover ${Document}{

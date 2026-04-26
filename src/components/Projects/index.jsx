@@ -1,5 +1,5 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Container,
   Wrapper,
@@ -8,105 +8,71 @@ import {
   CardContainer,
   ToggleButtonGroup,
   ToggleButton,
-  Divider,
+  ActivePill,
 } from "./ProjectsStyle";
 import ProjectCard from "../Cards/ProjectCards";
 import { projects } from "../../data/constants";
+import { FiGrid, FiGlobe, FiCpu, FiSmartphone, FiBox } from "react-icons/fi";
 
 const Projects = ({ openModal, setOpenModal }) => {
   const [toggle, setToggle] = useState("all");
+
+  const categories = [
+    { id: "all", name: "All", icon: <FiGrid /> },
+    { id: "web app", name: "Web", icon: <FiGlobe /> },
+    { id: "AI", name: "AI", icon: <FiCpu /> },
+    { id: "android app", name: "Mobile", icon: <FiSmartphone /> },
+    { id: "Other", name: "Other", icon: <FiBox /> },
+  ];
+
   return (
     <Container id="projects">
       <Wrapper>
         <Title>Projects</Title>
         <Desc>
-          I have worked on a wide range of projects. From web apps to android
-          apps. Here are some of my projects.
+          Showcasing specialized solutions in AI, Full-Stack Web, and Mobile development.
         </Desc>
+        
         <ToggleButtonGroup>
-          {toggle === "all" ? (
-            <ToggleButton active value="all" onClick={() => setToggle("all")}>
-              All
-            </ToggleButton>
-          ) : (
-            <ToggleButton value="all" onClick={() => setToggle("all")}>
-              All
-            </ToggleButton>
-          )}
-          <Divider />
-          {toggle === "web app" ? (
+          {categories.map((cat) => (
             <ToggleButton
-              active
-              value="web app"
-              onClick={() => setToggle("web app")}
+              key={cat.id}
+              active={toggle === cat.id}
+              onClick={() => setToggle(cat.id)}
             >
-              WEB APP'S
+              {cat.icon}
+              {cat.name}
+              {toggle === cat.id && (
+                <ActivePill
+                  layoutId="activeTab"
+                  transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                />
+              )}
             </ToggleButton>
-          ) : (
-            <ToggleButton value="web app" onClick={() => setToggle("web app")}>
-              WEB APP'S
-            </ToggleButton>
-          )}
-          <Divider />
-          {toggle === "AI" ? (
-            <ToggleButton active value="AI" onClick={() => setToggle("AI")}>
-              AI
-            </ToggleButton>
-          ) : (
-            <ToggleButton value="AI" onClick={() => setToggle("AI")}>
-              AI
-            </ToggleButton>
-          )}
-          <Divider />
-          {toggle === "android app" ? (
-            <ToggleButton
-              active
-              value="android app"
-              onClick={() => setToggle("android app")}
-            >
-              ANDROID APP'S
-            </ToggleButton>
-          ) : (
-            <ToggleButton
-              value="android app"
-              onClick={() => setToggle("android app")}
-            >
-              ANDROID APP'S
-            </ToggleButton>
-          )}
-          <Divider />
-          {toggle === "Other" ? (
-            <ToggleButton
-              active
-              value="Other"
-              onClick={() => setToggle("Other")}
-            >
-              Other
-            </ToggleButton>
-          ) : (
-            <ToggleButton value="Other" onClick={() => setToggle("Other")}>
-              Other
-            </ToggleButton>
-          )}
+          ))}
         </ToggleButtonGroup>
+
         <CardContainer>
-          {toggle === "all" &&
-            projects.map((project) => (
-              <ProjectCard
-                project={project}
-                openModal={openModal}
-                setOpenModal={setOpenModal}
-              />
-            ))}
-          {projects
-            .filter((item) => item.category == toggle)
-            .map((project) => (
-              <ProjectCard
-                project={project}
-                openModal={openModal}
-                setOpenModal={setOpenModal}
-              />
-            ))}
+          <AnimatePresence mode="popLayout">
+            {projects
+              .filter((item) => toggle === "all" || item.category === toggle)
+              .map((project) => (
+                <motion.div
+                  key={project.id}
+                  layout
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <ProjectCard
+                    project={project}
+                    openModal={openModal}
+                    setOpenModal={setOpenModal}
+                  />
+                </motion.div>
+              ))}
+          </AnimatePresence>
         </CardContainer>
       </Wrapper>
     </Container>
