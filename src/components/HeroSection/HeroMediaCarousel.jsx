@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
-import { experiences } from "../../data/constants";
+import { experiences, education } from "../../data/constants";
 import HeroImg from "../../images/HeroImage.jpg";
 
 const Container = styled.div`
@@ -45,38 +45,31 @@ const StyledImage = styled.img`
 
 const Overlay = styled(motion.div)`
   position: absolute;
-  bottom: 12%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 75%;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(8px);
-  padding: 10px 14px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  padding: 80px 30px 25px;
   text-align: center;
   color: white;
   z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 12px;
-  border: 1px solid ${({ theme }) => theme.primary + "30"};
-
-  @media (max-width: 640px) {
-    bottom: 15%;
-    width: 80%;
-    padding: 8px 12px;
-  }
+  justify-content: flex-end;
 `;
 
 const MilestoneTitle = styled.div`
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 600;
-  line-height: 1.3;
+  line-height: 1.4;
   color: white;
-  width: 100%;
+  max-width: 70%; /* Strict width to stay in safe center zone */
+  margin: 0 auto;
 
   @media (max-width: 640px) {
-    font-size: 9px;
+    font-size: 11px;
+    max-width: 80%;
   }
 `;
 
@@ -105,15 +98,20 @@ const Badge = styled.div`
 `;
 
 const HeroMediaCarousel = () => {
-  const allHighlights = experiences.reduce((acc, exp) => {
-    if (exp.highlights) {
-      return [
-        ...acc,
-        ...exp.highlights.map((h) => ({ ...h, company: exp.company })),
-      ];
-    }
-    return acc;
-  }, []);
+  const allHighlights = [
+    ...experiences.reduce((acc, exp) => {
+      if (exp.highlights) {
+        return [...acc, ...exp.highlights.map(h => ({ ...h, company: exp.company }))];
+      }
+      return acc;
+    }, []),
+    ...education.reduce((acc, edu) => {
+      if (edu.highlights) {
+        return [...acc, ...edu.highlights.map(h => ({ ...h, company: edu.school }))];
+      }
+      return acc;
+    }, [])
+  ];
 
   const slides = [
     {
@@ -136,6 +134,11 @@ const HeroMediaCarousel = () => {
 
   const current = slides[currentIndex];
 
+  const academicRank = {
+    title: "Rank 6 in Top Students (All Streams/Talents)",
+    link: "https://www.university.youth4work.com/nit_calicut_national-institute-of-technology-calicut/report/5"
+  };
+
   return (
     <Container>
       <AnimatePresence mode="wait">
@@ -145,20 +148,28 @@ const HeroMediaCarousel = () => {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 1.05 }}
           transition={{ duration: 0.6 }}
+          onClick={() => current.isProfile ? window.open(academicRank.link, '_blank') : window.open(current.link, '_blank')}
+          style={{ cursor: 'pointer' }}
         >
-          {current.isProfile ? null : <Badge>Milestone</Badge>}
+          {current.isProfile ? (
+            <Badge style={{ background: '#FFD700', color: '#000' }}>🏆 Top Ranked</Badge>
+          ) : (
+            <Badge>Milestone</Badge>
+          )}
           <StyledImage src={current.image} alt={current.title} />
           
-          {!current.isProfile && (
-            <Overlay
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
-            >
-              <MilestoneCompany>{current.company}</MilestoneCompany>
-              <MilestoneTitle>{current.title}</MilestoneTitle>
-            </Overlay>
-          )}
+          <Overlay
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            <MilestoneCompany style={current.isProfile ? { color: '#FFD700' } : {}}>
+              {current.isProfile ? "Academic Achievement" : current.company}
+            </MilestoneCompany>
+            <MilestoneTitle>
+              {current.isProfile ? academicRank.title : current.title}
+            </MilestoneTitle>
+          </Overlay>
         </ImageWrapper>
       </AnimatePresence>
     </Container>

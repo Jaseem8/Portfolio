@@ -232,8 +232,8 @@ const ContentOverlay = styled.div`
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 20px 15px 15px 15px;
-    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    padding: 40px 15px 15px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.95));
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -246,7 +246,7 @@ const NavButton = styled.div`
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(5px);
     display: flex;
     align-items: center;
@@ -256,7 +256,7 @@ const NavButton = styled.div`
     color: white;
     transition: all 0.2s ease;
     &:hover {
-        background: rgba(255, 255, 255, 0.4);
+        background: rgba(255, 255, 255, 0.5);
     }
     ${({ left }) => left ? 'left: 10px;' : 'right: 10px;'}
 `
@@ -264,17 +264,19 @@ const NavButton = styled.div`
 const HighlightImage = styled.img`
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    background: ${({ theme }) => theme.card_light};
 `
 
 const HighlightTitle = styled.div`
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     color: white;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    line-height: 1.4;
 `
 
 const LinkedInLink = styled.div`
